@@ -69,3 +69,11 @@ Next meet tommorow night (because ansh has personal life)
 - **Color Scheme**: Black and green, greyish(secondary color for shadows)
 
 - **Design File**: Figma design system (Vaarun by 22nd march) (Main page by 19th march)
+
+## Daily Breakdown
+
+### Day 1
+
+- Design file by Vaarun
+- Navbar, Color scheme
+- Learning and exploration
