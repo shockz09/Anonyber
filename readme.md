@@ -21,7 +21,13 @@
 - Missions
 - About
 - Team
-- Features
+- Features with links
+- Eyes page
+
+```py
+if time == 'more':
+    doer = Vaarun
+```
 
 ### Quiz Route
 
@@ -57,3 +63,17 @@ Next meet tommorow night (because ansh has personal life)
 20 march: quiz: rohit, main oage me and ansh.
 
 - Research(Ansh)
+
+## Project Details
+
+- **Color Scheme**: Black and green, greyish(secondary color for shadows)
+
+- **Design File**: Figma design system (Vaarun by 22nd march) (Main page by 19th march)
+
+## Daily Breakdown
+
+### Day 1
+
+- Design file by Vaarun
+- Navbar, Color scheme
+- Learning and exploration
