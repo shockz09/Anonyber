@@ -35,23 +35,23 @@ export default function Navbar() {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    src="https://i.ibb.co/bg2tf5K/smallanonyber.png"
                     alt="Workflow"
                   />
                   <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    className="hidden lg:block h-10 w-auto"
+                    src="https://i.ibb.co/w6PWygr/anonyberimg.png"
                     alt="Workflow"
                   />
                 </div>
-                <div className="hidden sm:block sm:ml-[25%]">
+                <div className="hidden sm:block sm:ml-[20%]">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={
-                         ' text-green-400 text-md hover:bg-gray-700 hover:text-green-500 px-3 py-2 rounded-md font-medium'
+                         ' text-green-500 text-lg hover:bg-gray-900 hover:text-green-500 px-3 py-2 rounded-md font-medium'
                         }
                         
                       >
