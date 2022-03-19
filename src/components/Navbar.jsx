@@ -44,7 +44,7 @@ export default function Navbar() {
                     alt="Workflow"
                   />
                 </div>
-                <div className=" w-[1000px] flex justify-center">
+                <div className="hidden sm:block sm:ml-[25%]">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
