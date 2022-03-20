@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,8 +6,41 @@ html{
  background-color:black;
   background-repeat:no-repeat;
   background-size:cover;
+  font-family: 'Source Code Pro', monospace;
 }
 *{
   padding:0px;
   margin:0px;
+}
+
+hr{
+  border-top: 4px solid #00FF19;
+  margin-top:50px;
+}
+
+.square{
+  height: 400px;
+  width: 400px;
+  margin-bottom:40px;
+  display:inline-block;
+  margin-left: 70px;
+  background-color: transparent;
+  border: 4px solid #00FF19;
+
+}
+
+.p-ansh{
+  margin-left: 1000px;
+  width: 50%;
+    float: right;
+}
+
+.square-2{
+  height: 400px;
+  width: 400px;
+  margin-bottom:40px;
+  margin-left: auto;
+  margin-right:70px;
+  background-color: transparent;
+  border: 4px solid #00FF19;
 }
