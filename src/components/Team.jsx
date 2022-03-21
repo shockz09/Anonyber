@@ -2,13 +2,38 @@ import React from 'react'
 
 function Team() {
   return (
-    <div>
-        <h1>Team</h1>
-        <p className="text-hecker p-ansh">Ansh Mamgain</p>
-        <div class="square"></div>
-      <div className="square-2"></div>
-        <div class="square"></div>
-    </div>
+    <section className="p-10 flex flex-col items-center justify-center gap-10 text-center">
+       <h2 className="underline decoration-hecker text-5xl mb-5 text-white">Our Team</h2>
+      <div className="flex lg:flex-row flex-col gap-10 items-center justify-center text-center lg:text-left lg:items-none lg:justify-none">
+        <img src="kdhc" className="border border-hecker h-48 w-48"  />
+        <div className="text-white">
+          <h2 className="text-2xl">Ansh Mamgain</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed adipisci laudantium <br/>
+            nihil incidunt aperiam obcaecati sequi rem nisi iure ea omnis temporibus, <br/>
+            vel perspiciatis quam quae vitae reprehenderit earum ullam!</p>
+        </div>
+      </div>
+      <div className="flex flex-col gap-10 lg:flex-row-reverse items-center justify-center text-center lg:text-left lg:items-none lg:justify-none">
+        <img src="kdhc" className="border border-hecker h-48 w-48"  />
+        <div className="text-white">
+          <h2 className="text-2xl">Vaarun Sinha</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed adipisci laudantium <br/>
+            nihil incidunt aperiam obcaecati sequi rem nisi iure ea omnis temporibus, <br/>
+            vel perspiciatis quam quae vitae reprehenderit earum ullam!</p>
+        </div>
+      </div>
+      <div className="flex lg:flex-row flex-col gap-10 items-center justify-center text-center lg:text-left lg:items-none lg:justify-none">
+        <img src="kdhc" className="border border-hecker h-48 w-48"  />
+        <div className="text-white">
+          <h2 className="text-2xl">Rohit Mishra</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed adipisci laudantium <br/>
+            nihil incidunt aperiam obcaecati sequi rem nisi iure ea omnis temporibus, <br/>
+            vel perspiciatis quam quae vitae reprehenderit earum ullam!</p>
+        </div>
+      </div>
+
+    </section>
+    
   )
 }
 

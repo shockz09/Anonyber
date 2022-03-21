@@ -2,6 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html{
  background-color:black;
   background-repeat:no-repeat;
@@ -26,21 +27,38 @@ hr{
   margin-left: 70px;
   background-color: transparent;
   border: 4px solid #00FF19;
+  display: inline-block;
 
 }
 
-.p-ansh{
-  margin-left: 1000px;
-  width: 50%;
-    float: right;
+.text-ansh{
+  font-size: 30px;
+  color: #00FF19;
+  font-family: 'Source Code Pro', monospace;
+  margin-top: -10px;
+  margin-left: 140px;
 }
 
 .square-2{
-  height: 400px;
-  width: 400px;
   margin-bottom:40px;
-  margin-left: auto;
   margin-right:70px;
   background-color: transparent;
   border: 4px solid #00FF19;
+}
+
+.text-ROHIT{
+  margin-left: 980px;
+  font-size: 30px;
+    display: inline-block;
+    font-family: 'Source Code Pro', monospace;
+    padding-top:-100px;
+    margin-top: -1000px;
+}
+
+.text-VAARUN{
+  font-size: 30px;
+  color: #00FF19;
+  font-family: 'Source Code Pro', monospace;
+  margin-top: -10px;
+  margin-left: 140px;
 }
