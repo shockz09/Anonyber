@@ -8,7 +8,7 @@ function Features() {
             <section className="border-2 border-hecker text-center flex flex-col items-center justify-center gap-10  p-2 rounded-lg ">
                 <img src="https://img.icons8.com/ios-glyphs/100/26e07f/video-playlist.png" alt="Videos Icon" />
                 <p className="text-lg">Hand picked easy to understand, short videos which educate you about various cyber attacks</p>
-                <a href="/types-of-attacks" className="border border-hecker p-2 hover:bg-dark-hecker m-3" style={{
+                <a href="/resources" className="border border-hecker p-2 hover:bg-dark-hecker m-3" style={{
                         transform: 'skew(-10deg)'
                     }}>
                     <span style={{

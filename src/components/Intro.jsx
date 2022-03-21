@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import Model from "./Earth";
 const Intro = () => {
   return (
-    <div className="h-[90vh] w-[99vw] flex justify-center bgg">
+    <div className="h-[90vh] w-[99vw] flex justify-center">
       <div className="text-center w-1/2 text-white ">
         <div className="flex justify-center mt-60 ">
           <img src="https://i.ibb.co/w6PWygr/anonyberimg.png" alt="Anonyber" />
