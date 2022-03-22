@@ -53,24 +53,28 @@ function Quiz() {
       (element) => element.checked
     );
     
-    console.log(isAnyRadioButtonChecked);
+    // console.log(isAnyRadioButtonChecked);//for checking , will removed once works
     if (currentindex < quizData.length && isAnyRadioButtonChecked) {
-      console.log(radioButtonsArray)
+      // console.log(radioButtonsArray)//for checking , will removed once works
       let answer
     htmlNodes.forEach(answer => {
         if(answer.checked===isAnyRadioButtonChecked) {
           answer = answer.id
-            console.log(answer)
+            // console.log(answer)
         }
        
     })
     if(answer === quizData[currentindex].correct) {
-      console.log("ufkc")
+      // console.log("ufkc")
   }
       setCurrentIndex(currentindex + 1);
       setCurrentQuestion(quizData[currentindex].question);
       setAnswers(quizData[currentindex]);
 
+    }else if(currentindex >= quizData.length ) {
+      console.log("doesn't work")
+      const content = document.querySelector(".all-content")
+      content.innerHTML = "<h2>You answered ${score}/${quizData.length} questions correctly</h2>"
     }
   };
   //   const buttonclick =()=>{
@@ -90,7 +94,7 @@ function Quiz() {
           Quiz Component
         </div>
       </div>
-      <div className="text-hecker text-center pt-4 ">
+      <div className="text-hecker text-center pt-4 all-content">
         <p>{currentQuestion}</p>
         <ul className="pt-4">
           <li>
