@@ -6,12 +6,12 @@ export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/Earth.gltf')
   const { actions } = useAnimations(animations, group)
-  useFrame(() => group.current.rotation.y += 0.005)
+  useFrame(() => group.current.rotation.y += 0.002)
   // useFrame(() => group.current.rotation.x += 0.01)
   return (
     <group ref={group} {...props} dispose={null}>
       <group>
-        <group rotation={[-Math.PI / 2, 0, 0]} scale={0.7}>
+        <group rotation={[-Math.PI / 2, 0, 0]} scale={0.77}>
           <group>
             <group scale={3.27}>
               <mesh geometry={nodes.TERRE1_0.geometry} material={materials['Material.005']} />
