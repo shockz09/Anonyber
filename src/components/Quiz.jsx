@@ -73,8 +73,9 @@ function Quiz() {
 
     }else if(currentindex >= quizData.length ) {
       console.log("doesn't work")
+      let score = 0; //just for testing
       const content = document.querySelector(".all-content")
-      content.innerHTML = "<h2>You answered ${score}/${quizData.length} questions correctly</h2>"
+      content.innerHTML = `<h2>You answered ${score}/${quizData.length} questions correctly</h2>`
     }
   };
   //   const buttonclick =()=>{
