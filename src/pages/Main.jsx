@@ -13,7 +13,7 @@ const Main = () => {
       <Intro />
       <Mission/>
       <Features />
-      <Team/>  <Quiz ques="duh the ques is shit it sucks lol"/>
+      <Team/>  <Quiz/>
       <Footer />
     
     </div>
