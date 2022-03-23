@@ -2,7 +2,7 @@ import React from 'react'
 
 function Team() {
   return (
-    <section className="p-10 flex flex-col items-center justify-center gap-10 text-center">
+    <section className="p-10 flex flex-col items-center justify-center gap-10 text-center" id="team">
        <h2 className="underline decoration-hecker text-5xl mb-5 text-white">Our Team</h2>
       <div className="flex lg:flex-row flex-col gap-10 items-center justify-center text-center lg:text-left lg:items-none lg:justify-none">
         <img src="kdhc" className="border border-hecker h-48 w-48"  />

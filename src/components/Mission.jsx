@@ -2,7 +2,7 @@ import React from "react";
 
 function Mission() {
   return (
-    <section className="text-white text-center  mb-72" >
+    <section className="text-white text-center mb-72 mt-96 lg:mt-0" id="Mission" >
 
         <h2 className="underline decoration-hecker text-center text-5xl mb-16">Our Mission</h2>
         <p className="text-xl">

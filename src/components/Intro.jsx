@@ -4,24 +4,45 @@ import { OrbitControls } from "@react-three/drei";
 import Model from "./Earth";
 const Intro = () => {
   return (
-    <div className="h-[90vh] w-[99vw] flex justify-center">
-      <div className="text-center w-1/2 text-white ">
-        <div className="flex justify-center mt-60 ">
-          <img src="https://i.ibb.co/w6PWygr/anonyberimg.png" alt="Anonyber" />
-        </div>
-        <div className="text-center ">
-          <h1 className="text-2xl inline">The Internet is like a <p className="text-2xl inline text-green-500">pool</p>  we just wanna add some  <h1 className="text-2xl inline text-green-500">Chlorine</h1> ;)</h1>
-        </div>
-      </div>
-      <div className="w-1/2 h-[70vh] mt-20 flex align-center ">
+    <div className="h-[100vh] w-[99vw] lg:flex lg:flex-row-reverse justify-center items-center  lg:h-[90vh] lg:m-0">
+      <div className="w-1/2 h-[70vh] mt-20 flex">
         <Canvas>
           <OrbitControls />
-          <directionalLight color="green" intensity={4} position={[5,10,4]} />
-          <ambientLight color="white" intensity={4}  />
+          <directionalLight color="green" intensity={4} position={[5, 10, 4]} />
+          <ambientLight color="white" intensity={4} />
           <Suspense fallback={null}>
             <Model />
           </Suspense>
         </Canvas>
+      </div>
+      <div className="text-center lg:w-1/2 text-white lg:ml-10">
+        <div className=" text-center flex flex-col justify-center ">
+          <img src="https://i.ibb.co/w6PWygr/anonyberimg.png" alt="Anonyber" />
+          <h1 className="text-4xl m-10">
+            The
+            <span className="underline decoration-hecker text-left">
+              Best Free Ed-Tech
+            </span>
+            Platform <br /> To Stay Cyber Aware.
+          </h1>
+          <div className="flex justify-center">
+            <a
+              href="#Mission"
+              className="border border-hecker p-2 w-1/2 hover:bg-dark-hecker m-10"
+              style={{
+                transform: "skew(-10deg)",
+              }}
+            >
+              <span
+                style={{
+                  transform: "skew(10deg)",
+                }}
+              >
+                Checkout The Features
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

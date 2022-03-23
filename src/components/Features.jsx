@@ -2,7 +2,7 @@ import React from 'react'
 
 function Features() {
   return (
-    <section className="text-white text-center pl-16 pr-16 m-5">
+    <section className="text-white text-center pl-16 pr-16 m-5" id="#feature">
         <h2 className="underline decoration-hecker text-5xl mb-5">Features</h2>
         <section className="grid lg:grid-cols-2 lg:grid-rows-2 grid-cols-1 gap-5 text-left">
             <section className="border-2 border-hecker text-center flex flex-col items-center justify-center gap-10  p-2 rounded-lg ">

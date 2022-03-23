@@ -7,6 +7,7 @@ function Video(props) {
       <hr />
       <h3 className="text-xl font-semibold mt-2 ">{props.video_title}</h3>
       <a
+        target="_blank"
         href={props.video_url}
         className="border-2 border-hecker p-2 m-4 mt-3 hover:bg-dark-hecker"
         style={{
@@ -18,7 +19,7 @@ function Video(props) {
             transform: "skew(10deg)",
           }}
         >
-          Visit
+          Watch
         </span>
       </a>
     </div>

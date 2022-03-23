@@ -220,7 +220,7 @@ function Quiz() {
   const [answers, setAnswers] = useState(quizData[currentindex]);
 
   return (
-    <div>
+    <div className="mt-20">
       <div className="flex justify-center text-white">
         <div className="text-center align-middle text-2xl">
           Quiz
@@ -228,12 +228,12 @@ function Quiz() {
       </div>
       <div className=" text-center pt-4 all-content">
         <mark className="text-hecker text-xl p-2 m-2 bg-black">Q{currentindex}</mark><p className="text-white mb-2 text-xl">{currentQuestion}</p>
-        <ol className="-pt-2 inline-block font-semibold ">
-        <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
+        <ol className="-pt-2 inline-block text-left font-semibold ">
+        <li className="p-2 border-2 m-2 rounded border-hecker mb-4 hover:bg-dark-hecker hover:text-white"> 
             <input type="radio" name="answer" id="b" className="pl-2 answer" />
-            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">A.</mark>{answers.a}</label>
+            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2 hover:bg-dark-hecker hover:text-white">A.</mark>{answers.a}</label>
           </li>
-
+    
           <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
             <input type="radio" name="answer" id="b" className=" answer" />
             <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">B.</mark>{answers.b}</label>

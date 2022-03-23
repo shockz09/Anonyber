@@ -8,6 +8,7 @@ html{
   background-repeat:no-repeat;
   background-size:cover;
   font-family: 'Source Code Pro', monospace;
+  scroll-behavior: smooth; 
 }
 *{
   padding:0px;
