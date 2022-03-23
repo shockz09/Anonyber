@@ -249,11 +249,15 @@ function Quiz() {
           </li>
         </ol>
       </div>
-      <div>
+      <div className="flex justify-center">
         <button
           id="submit"
           onClick={buttonclicknext}
-          className=" text-hecker w-full pt-4"
+          className=" text-hecker max-w-sm border border-hecker rounded-lg p-2 m-2 bg-black text-xl"
+          style={{
+            transform: 'skew(-4deg)'
+        }}
+        
         >
           Submit
         </button>
