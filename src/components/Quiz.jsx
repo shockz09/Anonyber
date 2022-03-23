@@ -177,7 +177,7 @@ function Quiz() {
       correct: "c",
     }
   ];
-  const buttonclicknext = () => {
+  const buttonclicknext = (e) => {
     let htmlNodes = document.getElementsByName("answer");
 
     let radioButtonsArray = Array.from(htmlNodes);
@@ -202,9 +202,15 @@ function Quiz() {
       setCurrentIndex(currentindex + 1);
       setCurrentQuestion(quizData[currentindex].question);
       setAnswers(quizData[currentindex]);
-    } else if (currentindex >= quizData.length) {
+
+    }else if(currentindex == quizData.length){
+      setSubmitValue("Submit")
+      setCurrentIndex(currentindex + 1);
+    } 
+    else if (currentindex > quizData.length ) {
       // console.log("doesn't work")
       let score = 0; //just for testing
+     setSubmitValue("Score above")
       const content = document.querySelector(".all-content");
       content.innerHTML = `<h2 className="text-white">You answered ${score}/${quizData.length} questions correctly</h2>`;
     }
@@ -216,7 +222,7 @@ function Quiz() {
   //   }
   const [currentindex, setCurrentIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(quizData[0].question);
-
+const [submitButtonValue,setSubmitValue] = useState("Next");
   const [answers, setAnswers] = useState(quizData[currentindex]);
 
   return (
@@ -259,7 +265,7 @@ function Quiz() {
         }}
         
         >
-          Submit
+         Next
         </button>
       </div>
     </div>
