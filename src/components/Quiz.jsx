@@ -204,15 +204,13 @@ function Quiz() {
       setAnswers(quizData[currentindex]);
 
     }else if(currentindex == quizData.length){
-      const buttonsubmit = document.getElementById("submit");
-      buttonsubmit.innerHTML = "Submit";
+      setSubmitValue("Submit")
       setCurrentIndex(currentindex + 1);
     } 
-    else if (currentindex > quizData.length) {
+    else if (currentindex > quizData.length ) {
       // console.log("doesn't work")
       let score = 0; //just for testing
-     const buttonsubmit = document.getElementById("submit");
-      buttonsubmit.innerHTML = "Score above"
+     setSubmitValue("Score above")
       const content = document.querySelector(".all-content");
       content.innerHTML = `<h2 className="text-white">You answered ${score}/${quizData.length} questions correctly</h2>`;
     }
@@ -224,7 +222,7 @@ function Quiz() {
   //   }
   const [currentindex, setCurrentIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(quizData[0].question);
-
+const [submitButtonValue,setSubmitValue] = useState("Next");
   const [answers, setAnswers] = useState(quizData[currentindex]);
 
   return (
