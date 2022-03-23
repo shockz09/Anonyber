@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 function BlogSlider() {
   return (
     <div className="">
-      <h1 className="underline decoration-hecker text-4xl text-white mb-10 ml-20">
+      <h1 className="underline  text-4xl text-white mb-10 ml-20">
         Blog Resources
       </h1>
       <div className="flex w-[100vw]">

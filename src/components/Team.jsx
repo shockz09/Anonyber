@@ -7,7 +7,7 @@ function Team() {
       <div className="flex lg:flex-row flex-col gap-10 items-center justify-center text-center lg:text-left lg:items-none lg:justify-none">
         <img src="kdhc" className="border border-hecker h-48 w-48"  />
         <div className="text-white">
-          <h2 className="text-2xl">Ansh Mamgain</h2>
+          <h2 className="text-3xl lg:mb-8  text-green-500 ">Ansh Mamgain</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed adipisci laudantium <br/>
             nihil incidunt aperiam obcaecati sequi rem nisi iure ea omnis temporibus, <br/>
             vel perspiciatis quam quae vitae reprehenderit earum ullam!</p>
@@ -16,7 +16,7 @@ function Team() {
       <div className="flex flex-col gap-10 lg:flex-row-reverse items-center justify-center text-center lg:text-left lg:items-none lg:justify-none">
         <img src="kdhc" className="border border-hecker h-48 w-48"  />
         <div className="text-white">
-          <h2 className="text-2xl">Vaarun Sinha</h2>
+          <h2 className="text-3xl lg:mb-8  text-green-500 ">Vaarun Sinha</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed adipisci laudantium <br/>
             nihil incidunt aperiam obcaecati sequi rem nisi iure ea omnis temporibus, <br/>
             vel perspiciatis quam quae vitae reprehenderit earum ullam!</p>
@@ -25,7 +25,7 @@ function Team() {
       <div className="flex lg:flex-row flex-col gap-10 items-center justify-center text-center lg:text-left lg:items-none lg:justify-none">
         <img src="kdhc" className="border border-hecker h-48 w-48"  />
         <div className="text-white">
-          <h2 className="text-2xl">Rohit Mishra</h2>
+          <h2 className="text-3xl lg:mb-8  text-green-500 ">Rohit Mishra</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed adipisci laudantium <br/>
             nihil incidunt aperiam obcaecati sequi rem nisi iure ea omnis temporibus, <br/>
             vel perspiciatis quam quae vitae reprehenderit earum ullam!</p>

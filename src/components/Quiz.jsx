@@ -226,7 +226,7 @@ const [submitButtonValue,setSubmitValue] = useState("Next");
   const [answers, setAnswers] = useState(quizData[currentindex]);
 
   return (
-    <div className="mt-20">
+    <div className="lg:mt-20">
       <div className="flex justify-center text-white">
         <div className="text-center align-middle text-2xl">
           Quiz
