@@ -5,7 +5,7 @@ import Model from "./Earth";
 const Intro = () => {
   return (
     <div className="h-[100vh] w-[99vw] lg:flex lg:flex-row-reverse justify-center items-center  lg:h-[90vh] lg:m-0">
-      <div className="w-1/2 h-[70vh] mt-20 flex">
+      <div className="lg:w-1/2 h-[70vh] mt-20 flex">
         <Canvas>
           <OrbitControls />
           <directionalLight color="green" intensity={4} position={[5, 10, 4]} />
