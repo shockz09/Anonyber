@@ -10,7 +10,7 @@ const Intro = () => {
           <img src="https://i.ibb.co/w6PWygr/anonyberimg.png" alt="Anonyber" />
         </div>
         <div className="text-center ">
-          <h1 className="text-2xl inline">The Internet is like a <h1 className="text-2xl inline text-green-500">pool</h1>  we just wanna add some  <h1 className="text-2xl inline text-green-500">Chlorine</h1> ;)</h1>
+          <h1 className="text-2xl inline">The Internet is like a <p className="text-2xl inline text-green-500">pool</p>  we just wanna add some  <h1 className="text-2xl inline text-green-500">Chlorine</h1> ;)</h1>
         </div>
       </div>
       <div className="w-1/2 h-[70vh] mt-20 flex align-center ">

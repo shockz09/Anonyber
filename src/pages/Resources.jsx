@@ -6,7 +6,7 @@ import "swiper/css";
 
 function Resources() {
   return (
-    <div> 
+    <div className="h-[150vh]" > 
       <Search />
       <VideoSlider />
       <BlogSlider />

@@ -35,7 +35,7 @@ function BlogSlider() {
           <SwiperSlide>
             {" "}
             <Blog
-              blog_title="How to Keep Your Passwords, Financial & Personal Information Online Safe in 2022"
+              blog_title="How to Keep Your Passwords, Financial & Personal Information Safe"
               blog_url="https://digitalguardian.com/blog/101-data-protection-tips-how-keep-your-passwords-financial-personal-information-safe"
               blog_img="https://twelvesec.com/wp-content/uploads/2021/03/data-protection.png"
             />
