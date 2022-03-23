@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
     "@react-three/drei": "^8.16.7",
@@ -20,6 +21,7 @@
     "swiper": "^8.0.7",
     "tailwind": "^4.0.0",
     "three": "^0.138.3",
+    "tiny-slider-react": "^0.5.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
