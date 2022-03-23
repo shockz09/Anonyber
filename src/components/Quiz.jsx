@@ -229,21 +229,21 @@ function Quiz() {
       <div className=" text-center pt-4 all-content">
         <mark className="text-hecker text-xl p-2 m-2 bg-black">Q{currentindex}</mark><p className="text-hecker mb-2 text-xl">{currentQuestion}</p>
         <ol className="-pt-2 inline-block font-semibold ">
-        <li className="p-2 border-2 m-2 border-hecker mb-4"> 
+        <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
             <input type="radio" name="answer" id="b" className="pl-2 answer" />
             <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">A.</mark>{answers.a}</label>
           </li>
 
-          <li className="p-2 border-2 m-2 border-hecker mb-4"> 
+          <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
             <input type="radio" name="answer" id="b" className=" answer" />
             <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">B.</mark>{answers.b}</label>
           </li>
-          <li className="p-2 border-2 m-2 border-hecker mb-4"> 
+          <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
             <input type="radio" name="answer" id="b" className="answer" />
             <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">C.</mark>{answers.c}</label>
           </li>
 
-          <li className="p-2 border-2 m-2 border-hecker "> 
+          <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
             <input type="radio" name="answer" id="b" className="answer" />
             <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">D.</mark>{answers.d}</label>
           </li>
@@ -253,7 +253,7 @@ function Quiz() {
         <button
           id="submit"
           onClick={buttonclicknext}
-          className=" text-hecker max-w-sm border border-hecker rounded-lg p-2 m-2 bg-black text-xl"
+          className=" text-hecker max-w-sm border  border-hecker rounded-lg p-2 m-2 bg-black text-xl"
           style={{
             transform: 'skew(-4deg)'
         }}
