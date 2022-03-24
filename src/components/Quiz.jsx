@@ -236,7 +236,7 @@ const onclickoption=()=>{
       <div className="flex justify-center">
         <button
           id="submit" 
-          className=" text-hecker max-w-sm border  border-hecker rounded-lg p-2 m-2 bg-black text-xl hover:bg-hecker hover:border-black hover:text-black"
+          className=" text-hecker max-w-sm border  border-hecker rounded-lg p-2 m-2 "
           style={{
             transform: 'skew(-4deg)'
         }}
