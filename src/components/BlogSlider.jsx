@@ -7,15 +7,26 @@ import "swiper/css/navigation";
 function BlogSlider() {
   return (
     <div className="">
-      <h1 className="underline decoration-hecker text-4xl text-white mb-10 ml-20">
+      <h1 className="underline decoration-hecker text-4xl text-white mt-20 mb-10 ml-8 lg:ml-20">
         Blog Resources
       </h1>
       <div className="flex w-[100vw]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar]}
-          spaceBetween={0}
-          slidesPerView={4}
+          spaceBetween={10}
           scrollbar={{ draggable: true }}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+          }}
           navigation
         >
           <SwiperSlide>
@@ -35,7 +46,7 @@ function BlogSlider() {
           <SwiperSlide>
             {" "}
             <Blog
-              blog_title="How to Keep Your Passwords, Financial & Personal Information Safe"
+              blog_title="How to Keep Your Passwords, Financial & Personal Information  "
               blog_url="https://digitalguardian.com/blog/101-data-protection-tips-how-keep-your-passwords-financial-personal-information-safe"
               blog_img="https://twelvesec.com/wp-content/uploads/2021/03/data-protection.png"
             />

@@ -3,13 +3,13 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Home', href: '/', current: true },
+  { name: 'Quiz', href: '/quiz', current: false },
+  { name: 'Resources', href: '/resources', current: false },
+  { name: 'Team', href: '/#team', current: false },
 ]
 
-function classNames(...classes) {
+function classNames(...classes) { 
   return classes.filter(Boolean).join(' ')
 }
 
@@ -35,12 +35,12 @@ export default function Navbar() {
                   <img
                     className="block lg:hidden h-8 w-auto"
                     src="https://i.ibb.co/bg2tf5K/smallanonyber.png"
-                    alt="Workflow"
+                    alt="Anonyber"
                   />
                   <img
                     className="hidden lg:block h-10 w-auto"
                     src="https://i.ibb.co/w6PWygr/anonyberimg.png"
-                    alt="Workflow"
+                    alt="Anonyber"
                   />
                 </div>
                 <div className="hidden sm:block sm:ml-[20%]">
