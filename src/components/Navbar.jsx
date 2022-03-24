@@ -6,10 +6,10 @@ const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Quiz', href: '/quiz', current: false },
   { name: 'Resources', href: '/resources', current: false },
-  { name: 'Team', href: '#team', current: false },
+  { name: 'Team', href: '/#team', current: false },
 ]
 
-function classNames(...classes) {
+function classNames(...classes) { 
   return classes.filter(Boolean).join(' ')
 }
 

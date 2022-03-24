@@ -2,8 +2,8 @@ import React from "react";
 
 function Video(props) {
   return (
-    <div class="flex flex-col items-center justify-center border border-hecker bg-black text-white w-[20VW] h-[30vh] m-10 text-center">
-      <img src={props.thumbnail_url} alt={props.video_title} className="mt-4 h-[16vh] w-64" />
+    <div class="flex flex-col items-center justify-center border border-hecker bg-black text-white text-center lg:w-[20VW] lg:h-[35vh]">
+      <img src={props.thumbnail_url} alt={props.video_title} className="mt-4 h-[16vh] w-72" />
       <hr />
       <h3 className="text-xl font-semibold mt-2 ">{props.video_title}</h3>
       <a

@@ -7,15 +7,26 @@ import "swiper/css/navigation";
 function BlogSlider() {
   return (
     <div className="">
-      <h1 className="underline  text-4xl text-white mb-10 ml-20">
+      <h1 className="underline decoration-hecker text-4xl text-white mt-20 mb-10 ml-8 lg:ml-20">
         Blog Resources
       </h1>
       <div className="flex w-[100vw]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar]}
-          spaceBetween={0}
-          slidesPerView={4}
+          spaceBetween={10}
           scrollbar={{ draggable: true }}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+          }}
           navigation
         >
           <SwiperSlide>

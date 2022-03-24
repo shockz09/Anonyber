@@ -5,7 +5,7 @@ function Blog(props) {
   return (
    
       <div className="">
-        <div className="flex flex-col items-center justify-center border border-hecker bg-black text-white text-center w-[20VW] h-[35vh]">
+        <div className="flex flex-col items-center justify-center border border-hecker bg-black text-white text-center lg:w-[20VW] lg:h-[35vh]">
           <img
             className="border-2 border-hecker mt-4 h-[16vh] w-72"
             src={props.blog_img}
