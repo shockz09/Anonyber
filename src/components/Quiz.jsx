@@ -167,54 +167,46 @@ function Quiz() {
       d: "None of these",
       correct: "b",
     },
-    {
-      question:
-        "Which of the following is the best answer for how to secure your router?",
-      a: "Change the default name and password of the router.",
-      b: "Turn off the router’s remote management.",
-      c: "All of the these.",
-      d: "Log out as the administrator once the router is set up.",
-      correct: "c",
-    }
   ];
-  const buttonclicknext = (e) => {
-    let htmlNodes = document.getElementsByName("answer");
+  // const buttonclicknext = (e) => {
+  //   let htmlNodes = document.getElementsByName("answer");
 
-    let radioButtonsArray = Array.from(htmlNodes);
-    //logic by rohit ser (targeted towards vaarun ser)
-    let isAnyRadioButtonChecked = radioButtonsArray.some(
-      (element) => element.checked
-    );
+  //   let radioButtonsArray = Array.from(htmlNodes);
+  //   //logic by rohit ser (targeted towards vaarun ser)
+  //   let isAnyRadioButtonChecked = radioButtonsArray.some(
+  //     (element) => element.checked
+  //   );
 
-    // console.log(isAnyRadioButtonChecked);//for checking , will removed once works
-    if (currentindex < quizData.length && isAnyRadioButtonChecked) {
-      // console.log(radioButtonsArray)//for checking , will removed once works
-      let answer;
-      htmlNodes.forEach((answer) => {
-        if (answer.checked === isAnyRadioButtonChecked) {
-          answer = answer.id;
-          // console.log(answer)
-        }
-      });
-      if (answer === quizData[currentindex].correct) {
-        // console.log("ufkc")
-      }
-      setCurrentIndex(currentindex + 1);
-      setCurrentQuestion(quizData[currentindex].question);
-      setAnswers(quizData[currentindex]);
+  //   // console.log(isAnyRadioButtonChecked);//for checking , will removed once works
+  //   if (currentindex < quizData.length && isAnyRadioButtonChecked) {
+  //     // console.log(radioButtonsArray)//for checking , will removed once works
+    
+  //     let answer;
+  //     htmlNodes.forEach((answer) => {
+  //       if (answer.checked === isAnyRadioButtonChecked ) {
+  //         answer = answer.id;
+  //         // console.log(answer)
+  //       }
+  //     });
+  //     if (answer === quizData[currentindex].correct) {
+  //       // console.log("ufkc")
+  //     }
+  //     setCurrentIndex(currentindex + 1);
+  //     setCurrentQuestion(quizData[currentindex].question);
+  //     setAnswers(quizData[currentindex]);
 
-    }else if(currentindex == quizData.length){
-      setSubmitValue("Submit")
-      setCurrentIndex(currentindex + 1);
-    } 
-    else if (currentindex > quizData.length ) {
-      // console.log("doesn't work")
-      let score = 0; //just for testing
-     setSubmitValue("Score above")
-      const content = document.querySelector(".all-content");
-      content.innerHTML = `<h2 className="text-white">You answered ${score}/${quizData.length} questions correctly</h2>`;
-    }
-  };
+  //   }else if(currentindex == quizData.length){
+  //     setSubmitValue("Submit")
+  //     setCurrentIndex(currentindex + 1);
+  //   } 
+  //   else if (currentindex > quizData.length ) {
+  //     // console.log("doesn't work")
+  //     let score = 0; //just for testing
+  //    setSubmitValue("Score above")
+  //     const content = document.querySelector(".all-content");
+  //     content.innerHTML = `<h2 className="text-white">You answered ${score}/${quizData.length+1} questions correctly</h2>`;
+  //   }
+  // };
   //   const buttonclick =()=>{
   //     currentindex++
   //     setCurrentQuestion(quizData[currentindex].question)
@@ -222,9 +214,11 @@ function Quiz() {
   //   }
   const [currentindex, setCurrentIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(quizData[0].question);
-const [submitButtonValue,setSubmitValue] = useState("Next");
+  const [submitButtonValue,setSubmitValue] = useState("Next");
   const [answers, setAnswers] = useState(quizData[currentindex]);
+const onclickoption=()=>{
 
+}
   return (
     <div>
       <div className="flex justify-center text-white">
@@ -233,33 +227,16 @@ const [submitButtonValue,setSubmitValue] = useState("Next");
         </div>
       </div>
       <div className=" text-center pt-4 all-content">
-        <mark className="text-hecker text-xl p-2 m-2 bg-black">Q{currentindex}</mark><p className="text-white mb-2 text-xl">{currentQuestion}</p>
-        <ol className="-pt-2 inline-block font-semibold ">
-        <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
-            <input type="radio" name="answer" id="b" className="pl-2 answer" />
-            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">A.</mark>{answers.a}</label>
-          </li>
-
-          <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
-            <input type="radio" name="answer" id="b" className=" answer" />
-            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">B.</mark>{answers.b}</label>
-          </li>
-          <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
-            <input type="radio" name="answer" id="b" className="answer" />
-            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">C.</mark>{answers.c}</label>
-          </li>
-
-          <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
-            <input type="radio" name="answer" id="b" className="answer" />
-            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">D.</mark>{answers.d}</label>
-          </li>
-        </ol>
+        <div className="text-xl mb-4 mt-2 text-white">{currentQuestion}</div>
+      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.a}</button><br/>
+      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.b}</button><br/>
+      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.c}</button><br/>
+      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.d}</button>
       </div>
       <div className="flex justify-center">
         <button
-          id="submit"
-          onClick={buttonclicknext}
-          className=" text-hecker max-w-sm border  border-hecker rounded-lg p-2 m-2 bg-black text-xl"
+          id="submit" 
+          className=" text-hecker max-w-sm border  border-hecker rounded-lg p-2 m-2 bg-black text-xl hover:bg-hecker hover:border-black hover:text-black"
           style={{
             transform: 'skew(-4deg)'
         }}
@@ -271,5 +248,4 @@ const [submitButtonValue,setSubmitValue] = useState("Next");
     </div>
   );
 }
-
 export default Quiz;

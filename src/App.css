@@ -25,3 +25,7 @@ html{
 .swiper-button-prev::after{
   color: #00FF19;
  }
+
+ h2{
+   color:white;
+ }
