@@ -220,42 +220,18 @@ const onclickoption=()=>{
 
 }
   return (
-    <div className="lg:mt-20">
+    <div>
       <div className="flex justify-center text-white">
         <div className="text-center align-middle text-2xl">
           Quiz
         </div>
       </div>
       <div className=" text-center pt-4 all-content">
-<<<<<<< HEAD
         <div className="text-xl mb-4 mt-2 text-white">{currentQuestion}</div>
       <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.a}</button><br/>
       <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.b}</button><br/>
       <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.c}</button><br/>
       <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.d}</button>
-=======
-        <mark className="text-hecker text-xl p-2 m-2 bg-black">Q{currentindex}</mark><p className="text-white mb-2 text-xl">{currentQuestion}</p>
-        <ol className="-pt-2 inline-block text-left font-semibold ">
-        <li className="p-2 border-2 m-2 rounded border-hecker mb-4 hover:bg-dark-hecker hover:text-white"> 
-            <input type="radio" name="answer" id="b" className="pl-2 answer" />
-            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2 hover:bg-dark-hecker hover:text-white">A.</mark>{answers.a}</label>
-          </li>
-    
-          <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
-            <input type="radio" name="answer" id="b" className=" answer" />
-            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">B.</mark>{answers.b}</label>
-          </li>
-          <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
-            <input type="radio" name="answer" id="b" className="answer" />
-            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">C.</mark>{answers.c}</label>
-          </li>
-
-          <li className="p-2 border-2 m-2 rounded border-hecker mb-4"> 
-            <input type="radio" name="answer" id="b" className="answer" />
-            <label id="a_text" className="text-white"><mark className="bg-black text-hecker p-2">D.</mark>{answers.d}</label>
-          </li>
-        </ol>
->>>>>>> 012d307b294022ccac224fd92ac68b33fda9c3bb
       </div>
       <div className="flex justify-center">
         <button
