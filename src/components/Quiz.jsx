@@ -177,13 +177,14 @@ function Quiz() {
   ];
 
   const buttonclicknext = () => {
-    let htmlNodes = document.getElementsByClassName("option-div");
+    let htmlNodes = document.getElementsByClassName("option");
     let arraybuttons = Array.from(htmlNodes)
-    let isButtonClicked = arraybuttons.some((element) => element.classList.contains("clicked"));
-    let score = 0;
-    if(currentindex <= quizData.length ) {
+    let isButtonClicked = arraybuttons.some((element) => element.clicked);
+   
+    if(currentindex <= quizData.length) {
  setCurrentIndex(currentindex + 1);
- setCurrentQuestion(quizData[currentindex].question)
+ setCurrentQuestion(quizData[currentindex].question) 
+setScore(score+1)
  setAnswers(quizData[currentindex])
     }else if(currentindex >quizData.length) {
       let fulldiv = document.querySelector(".main-div-quiz")
@@ -245,6 +246,7 @@ function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState("Nothing");
   const [submitButtonValue,setSubmitValue] = useState("Next");
   const [answers, setAnswers] = useState(nothing);
+  const [score,setScore] = useState(0);
 
   return (
     <div className="border-hecker border main-div-quiz">
@@ -255,10 +257,10 @@ function Quiz() {
       </div>
       <div className=" text-center pt-4 all-content option-div">
         <div className="text-xl mb-4 mt-2 text-white">{currentQuestion}</div>
-      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.a}</button><br/>
-      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.b}</button><br/>
-      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.c}</button><br/>
-      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.d}</button>
+      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.a}</button><br/>
+      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.b}</button><br/>
+      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.c}</button><br/>
+      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.d}</button>
       </div>
       <div className="flex justify-center">
         <button
