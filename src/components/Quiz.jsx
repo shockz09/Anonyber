@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState } from "react";
 
 function Quiz() {
@@ -220,8 +220,8 @@ const onclickoption=()=>{
 
 }
   return (
-    <div>
-      <div className="flex justify-center text-white">
+    <div className="border-hecker border">
+      <div className="flex justify-center text-white border-hecker ">
         <div className="text-center align-middle text-2xl">
           Quiz
         </div>
@@ -240,7 +240,6 @@ const onclickoption=()=>{
           style={{
             transform: 'skew(-4deg)'
         }}
-        
         >
          Next
         </button>
