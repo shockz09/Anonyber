@@ -166,8 +166,31 @@ function Quiz() {
       c: "All of the above",
       d: "None of these",
       correct: "b",
+    },{
+      question: "Cyber criminals only target large companies.",
+      a: "True",
+      b: "False",
+      c: "All of the above",
+      d: "None of these",
+      correct: "b",
     },
   ];
+
+  const buttonclicknext = () => {
+    let htmlNodes = document.getElementsByClassName("option-div");
+    let arraybuttons = Array.from(htmlNodes)
+    let isButtonClicked = arraybuttons.some((element) => element.classList.contains("clicked"));
+    let score = 0;
+    if(currentindex <= quizData.length ) {
+ setCurrentIndex(currentindex + 1);
+ setCurrentQuestion(quizData[currentindex].question)
+ setAnswers(quizData[currentindex])
+    }else if(currentindex >quizData.length) {
+      let fulldiv = document.querySelector(".main-div-quiz")
+     fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`
+     fulldiv.classList.add("text-score")
+    }
+  }
   // const buttonclicknext = (e) => {
   //   let htmlNodes = document.getElementsByName("answer");
 
@@ -212,21 +235,25 @@ function Quiz() {
   //     setCurrentQuestion(quizData[currentindex].question)
   // console.log(currentindex)
   //   }
+  const nothing = {
+    a: "Click on the button to start the quiz",
+    b:"Click on the button to start the quiz",
+    c:"Click on the button to start the quiz",
+    d:"Click on the button to start the quiz",
+  }
   const [currentindex, setCurrentIndex] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(quizData[0].question);
+  const [currentQuestion, setCurrentQuestion] = useState("Nothing");
   const [submitButtonValue,setSubmitValue] = useState("Next");
-  const [answers, setAnswers] = useState(quizData[currentindex]);
-const onclickoption=()=>{
+  const [answers, setAnswers] = useState(nothing);
 
-}
   return (
-    <div className="border-hecker border">
+    <div className="border-hecker border main-div-quiz">
       <div className="flex justify-center text-white border-hecker ">
         <div className="text-center align-middle text-2xl">
           Quiz
         </div>
       </div>
-      <div className=" text-center pt-4 all-content">
+      <div className=" text-center pt-4 all-content option-div">
         <div className="text-xl mb-4 mt-2 text-white">{currentQuestion}</div>
       <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.a}</button><br/>
       <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black" >{answers.b}</button><br/>
@@ -240,10 +267,12 @@ const onclickoption=()=>{
           style={{
             transform: 'skew(-4deg)'
         }}
+        onClick={buttonclicknext}
         >
          Next
         </button>
       </div>
+   
     </div>
   );
 }
