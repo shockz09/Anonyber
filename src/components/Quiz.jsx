@@ -181,10 +181,13 @@ function Quiz() {
     let arraybuttons = Array.from(htmlNodes)
     let isButtonClicked = arraybuttons.some((element) => element.clicked);
    
-    if(currentindex <= quizData.length && checkClickA || checkClickB || checkClickC || checkClickD) {
+    if(currentindex < quizData.length && checkClickA || checkClickB || checkClickC || checkClickD) {
  setCurrentIndex(currentindex + 1);
+ console.log("done log")
  setCurrentQuestion(quizData[currentindex].question) 
-setScore(score+1)
+ if(valueA === answers.correct || valueB ===  answers.correct || valueC === answers.correct || valueD === answers.correct) { 
+  setScore(score + 1)
+ }
 setCheckClickA(false)
 setCheckClickB(false)
 setCheckClickC(false)
@@ -194,6 +197,7 @@ setCheckClickD(false)
       let fulldiv = document.querySelector(".main-div-quiz")
      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`
      fulldiv.classList.add("text-score")
+    
     }
   }
   // const buttonclicknext = (e) => {
@@ -251,6 +255,10 @@ setCheckClickD(false)
   const [submitButtonValue,setSubmitValue] = useState("Next");
   const [answers, setAnswers] = useState(nothing);
   const [score,setScore] = useState(0);
+  const [valueA,setValueA] = useState("")
+  const [valueB,setValueB] = useState("")
+  const [valueC,setValueC] = useState("")
+  const [valueD,setValueD] = useState("")
   const [checkClickA,setCheckClickA] = useState(false);
   const [checkClickB,setCheckClickB] = useState(false);
   const [checkClickC,setCheckClickC] = useState(false);
@@ -258,19 +266,23 @@ setCheckClickD(false)
   const optionClick = (e)=>{
     // if(e.target.innerText === quizData[currentindex].a){
 //  console.log(e.target.innerText === quizData[currentindex].a) 
-let valueof = answers.a
-let valueofb = answers.b
-let valueofc = answers.c
-let valueofd = answers.d
+setValueA(answers.a)
+setValueB(answers.b)
+setValueC(answers.c)
+setValueD(answers.d)
 
-if(valueof === e.target.innerText){
+if(valueA === e.target.innerText){
   setCheckClickA(true)
-}else if(valueofb === e.target.innerText){
+  console.log("done a ")
+}else if(valueB === e.target.innerText){
   setCheckClickB(true)
-}else if(valueofc === e.target.innerText){
+  console.log("done b ")
+}else if(valueC === e.target.innerText){
   setCheckClickC(true)
-}else if(valueofd === e.target.innerText){
+  console.log("done c ")
+}else if(valueD === e.target.innerText){
   setCheckClickD(true)
+  console.log("done d ")
 }
     // }
   }
