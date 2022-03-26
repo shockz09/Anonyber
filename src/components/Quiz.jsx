@@ -188,15 +188,23 @@ function Quiz() {
     let arraybuttons = Array.from(htmlNodes)
     let isButtonClicked = arraybuttons.some((element) => element.clicked);
    
-    if(currentindex <= quizData.length) {
+    if(currentindex < quizData.length && checkClickA || checkClickB || checkClickC || checkClickD) {
  setCurrentIndex(currentindex + 1);
+ console.log("done log")
  setCurrentQuestion(quizData[currentindex].question) 
-setScore(score+1)
+ if(valueA === answers.correct || valueB ===  answers.correct || valueC === answers.correct || valueD === answers.correct) { 
+  setScore(score + 1)
+ }
+setCheckClickA(false)
+setCheckClickB(false)
+setCheckClickC(false)
+setCheckClickD(false)
  setAnswers(quizData[currentindex])
     }else if(currentindex >quizData.length) {
       let fulldiv = document.querySelector(".main-div-quiz")
      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`
      fulldiv.classList.add("text-score")
+    
     }
   }
   // const buttonclicknext = (e) => {
@@ -254,7 +262,37 @@ setScore(score+1)
   const [submitButtonValue,setSubmitValue] = useState("Next");
   const [answers, setAnswers] = useState(nothing);
   const [score,setScore] = useState(0);
+  const [valueA,setValueA] = useState("")
+  const [valueB,setValueB] = useState("")
+  const [valueC,setValueC] = useState("")
+  const [valueD,setValueD] = useState("")
+  const [checkClickA,setCheckClickA] = useState(false);
+  const [checkClickB,setCheckClickB] = useState(false);
+  const [checkClickC,setCheckClickC] = useState(false);
+  const [checkClickD,setCheckClickD] = useState(false);
+  const optionClick = (e)=>{
+    // if(e.target.innerText === quizData[currentindex].a){
+//  console.log(e.target.innerText === quizData[currentindex].a) 
+setValueA(answers.a)
+setValueB(answers.b)
+setValueC(answers.c)
+setValueD(answers.d)
 
+if(valueA === e.target.innerText){
+  setCheckClickA(true)
+  console.log("done a ")
+}else if(valueB === e.target.innerText){
+  setCheckClickB(true)
+  console.log("done b ")
+}else if(valueC === e.target.innerText){
+  setCheckClickC(true)
+  console.log("done c ")
+}else if(valueD === e.target.innerText){
+  setCheckClickD(true)
+  console.log("done d ")
+}
+    // }
+  }
   return (
     <div className="border-hecker border main-div-quiz">
       <div className="flex justify-center text-white border-hecker ">
@@ -262,12 +300,12 @@ setScore(score+1)
           Quiz
         </div>
       </div>
-      <div className=" text-center pt-4 all-content option-div">
-        <div className="text-xl mb-4 mt-2 text-white">{currentQuestion}</div>
-      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.a}</button><br/>
-      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.b}</button><br/>
-      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.c}</button><br/>
-      <button className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.d}</button>
+      <div onClick={optionClick} className=" text-center pt-4 all-content option-div">
+        <div onClick={optionClick} className="text-xl mb-4 mt-2 text-white">{currentQuestion}</div>
+      <button onClick={optionClick} className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.a}</button><br/>
+      <button onClick={optionClick} className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.b}</button><br/>
+      <button onClick={optionClick} className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.c}</button><br/>
+      <button onClick={optionClick} className="border-2 border-hecker text-white p-2 m-2 hover:bg-hecker rounded-lg hover:border-black hover:text-black option" >{answers.d}</button>
       </div>
       <div className="flex justify-center">
         <button
