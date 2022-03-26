@@ -27,6 +27,12 @@ html{
   color: #00FF19;
  }
 
+ .text-score{
+   color:white;
+   text-align:center;
+   padding:10px;
+   font-size: 150%;
+ }
  .swiper-container {
   width: 480px;
 }
