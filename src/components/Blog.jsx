@@ -1,13 +1,19 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, {useEffect} from "react";
+import AOS from 'aos';
+import "aos/dist/aos.css";
+
 
 function Blog(props) {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
    
-      <div className="">
-        <div className="flex flex-col items-center justify-center border border-hecker bg-black text-white text-center lg:w-[20VW] lg:h-[35vh]">
+      <div className="" data-aos="flip-up">
+        <div className="flex flex-col items-center justify-center border border-hecker bg-black text-white text-center lg:w-[20vw] lg:h-[35vh] mt-10">
           <img
-            className="border-2 border-hecker mt-4 h-[16vh] w-72"
+            className="border-3 border-hecker h-[16vh] w-72"
             src={props.blog_img}
             alt={props.blog_title}
           />

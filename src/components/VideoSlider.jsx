@@ -1,6 +1,5 @@
 import React from "react";
 import Video from "../components/Video";
-import Blog from "../components/Blog";
 import { Swiper, SwiperSlide, EffectCube } from "swiper/react";
 import Carousel from "react-tiny-slider";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
@@ -8,11 +7,11 @@ import "swiper/css/navigation";
 
 function VideoSlider() {
   return (
-    <div className="">
+    <div className="" >
       <h1 className="underline decoration-hecker  text-4xl text-white mb-10 ml-8 lg:ml-20 mt-10">
         Video resources
       </h1>
-      <div className="flex w-[100vw]">
+      <div className="flex w-[99vw]">
         <Swiper
          modules={[Navigation, Pagination, Scrollbar]}
          spaceBetween={10}
