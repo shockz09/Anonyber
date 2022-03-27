@@ -1,0 +1,5 @@
+ <ResourceCard 
+            resource_img_url = "https://img.youtube.com/vi/PkZNo7MFNFg/sddefault.jpg"
+            resource_title = "Learn JavaScript - Full Course for Beginners"
+            resource_url = "https://youtu.be/PkZNo7MFNFg"
+            />
