@@ -1,8 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 function Mission() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
-    <section className="text-white text-center mb-[15vh] lg:mt-[0vh] " id="Mission" >
+    <section className="text-white text-center  mb-[15vh] lg:mt-[0vh] " data-aos="fade-down" id="Mission" >
 
         <h2 className="underline decoration-hecker text-center text-5xl mb-16">Our Mission</h2>
         <p className="text-xl">

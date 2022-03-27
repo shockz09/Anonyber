@@ -7,10 +7,10 @@ import "swiper/css/navigation";
 function BlogSlider() {
   return (
     <div className="">
-      <h1 className="underline decoration-hecker text-4xl text-white mt-20 mb-10 ml-8 lg:ml-20">
+      <h1 className="underline decoration-hecker text-4xl text-white  mt-10    ml-8 lg:ml-20">
         Blog Resources
       </h1>
-      <div className="flex w-[100vw]">
+      <div className="flex w-[99vw]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar]}
           spaceBetween={10}
@@ -46,7 +46,7 @@ function BlogSlider() {
           <SwiperSlide>
             {" "}
             <Blog
-              blog_title="How to Keep Your Passwords, Financial & Personal Information  "
+              blog_title="How to Keep Your Credentials safe. "
               blog_url="https://digitalguardian.com/blog/101-data-protection-tips-how-keep-your-passwords-financial-personal-information-safe"
               blog_img="https://twelvesec.com/wp-content/uploads/2021/03/data-protection.png"
             />
