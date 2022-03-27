@@ -74,10 +74,10 @@ function Quiz() {
     {
       question:
         "You get a text message from a vendor who asks you to click on a link to renew your password so that you can log in to its website. You should:",
-      a: "Reply to the text to confirm that you really need to renew your password.      ",
-      b: "Pick up the phone and call the vendor, using a phone number you know to be correct, to confirm that the request is real.      ",
-      c: "Click on the link. If it takes you to the vendor’s website, then you’ll know it’s not a scam.      ",
-      d: "All of these.      ",
+      a: "lel ",
+      b: "kek",
+      c: "mhm",
+      d: "sup",
       correct: "b",
     },
     {
@@ -184,27 +184,24 @@ function Quiz() {
   ];
 
   const buttonclicknext = () => {
-    let htmlNodes = document.getElementsByClassName("option");
-    let arraybuttons = Array.from(htmlNodes)
-    let isButtonClicked = arraybuttons.some((element) => element.clicked);
+    // let htmlNodes = document.getElementsByClassName("option");
+    // let arraybuttons = Array.from(htmlNodes)
+    // let isButtonClicked = arraybuttons.some((element) => element.clicked);
    
     if(currentindex < quizData.length && checkClickA || checkClickB || checkClickC || checkClickD) {
  setCurrentIndex(currentindex + 1);
  console.log("done log")
- setCurrentQuestion(quizData[currentindex].question) 
- if(valueA === answers.correct || valueB ===  answers.correct || valueC === answers.correct || valueD === answers.correct) { 
-  setScore(score + 1)
- }
+setCurrentQuestion(quizData[currentindex].question) 
+setAnswers(quizData[currentindex])
 setCheckClickA(false)
 setCheckClickB(false)
 setCheckClickC(false)
 setCheckClickD(false)
- setAnswers(quizData[currentindex])
-    }else if(currentindex >quizData.length) {
+}
+else if(currentindex >quizData.length) {
       let fulldiv = document.querySelector(".main-div-quiz")
      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`
      fulldiv.classList.add("text-score")
-    
     }
   }
   // const buttonclicknext = (e) => {
@@ -259,7 +256,7 @@ setCheckClickD(false)
   }
   const [currentindex, setCurrentIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState("Nothing");
-  const [submitButtonValue,setSubmitValue] = useState("Next");
+  // const [submitButtonValue,setSubmitValue] = useState("Next");
   const [answers, setAnswers] = useState(nothing);
   const [score,setScore] = useState(0);
   const [valueA,setValueA] = useState("")
