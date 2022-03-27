@@ -188,9 +188,10 @@ function Quiz() {
     // let arraybuttons = Array.from(htmlNodes)
     // let isButtonClicked = arraybuttons.some((element) => element.clicked);
    
-    if((currentindex < quizData.length -1 && checkClickA) || checkClickB || checkClickC || checkClickD) {
+    if((currentindex < quizData.length)  && checkClickA || checkClickB || checkClickC || checkClickD) {
  setCurrentIndex(currentindex + 1);
  console.log("done log")
+ console.log("dunno but its still working")
  setCurrentQuestion(quizData[currentindex].question)
 setAnswers(quizData[currentindex])
 setCheckClickA(false)
@@ -211,13 +212,13 @@ setCheckClickD(false)}
 //   console.log("bruh kek")
 // }
 
-else if(currentindex > quizData.length) {
+else if(currentindex  > quizData.length ) {
       let fulldiv = document.querySelector(".main-div-quiz")
      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`
-     console.log("wtf i see")
+      console.log("bruh kek")
      fulldiv.classList.add("text-score")
     }else if(currentindex === quizData.length){
-      console.log("ok finally lel")
+      console.log("index equal")
     }
   }
   // const buttonclicknext = (e) => {
@@ -271,9 +272,9 @@ else if(currentindex > quizData.length) {
     d:"Click on the button to start the quiz",
   }
   const [currentindex, setCurrentIndex] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState("AYO QUESTION");
+  const [currentQuestion, setCurrentQuestion] = useState(quizData[0].question);
   // const [submitButtonValue,setSubmitValue] = useState("Next");
-  const [answers, setAnswers] = useState(nothing);
+  const [answers, setAnswers] = useState(quizData[0]);
   const [score,setScore] = useState(0);
   const [valueA,setValueA] = useState("")
   const [valueB,setValueB] = useState("")
