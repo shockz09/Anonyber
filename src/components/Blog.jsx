@@ -30,7 +30,7 @@ function Blog(props) {
                 transform: "skew(10deg)",
               }}
             >
-              Visit Blog
+              Read Blog
             </span>
           </a>
         </div>
