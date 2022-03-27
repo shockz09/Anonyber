@@ -28,9 +28,21 @@ function Blog(props) {
               transform: "skew(10deg)",
             }}
           >
+<<<<<<< HEAD
             Visit Blog
           </span>
         </a>
+=======
+            <span
+              style={{
+                transform: "skew(10deg)",
+              }}
+            >
+              Read Blog
+            </span>
+          </a>
+        </div>
+>>>>>>> 1082ec97ebc8eb66fa882dc20dcf251cb9eee01f
       </div>
     </div>
   );

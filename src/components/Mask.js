@@ -15,13 +15,13 @@ export default function Mask({ ...props }) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <group position={[-0.18, 0.01, 0]} rotation={[1.69, 0, -0.08]} scale={1.41}>
+        <group position={[-0.1, 0, 0]} rotation={[1.69, 0, -0.08]} scale={0.3}>
           <mesh geometry={nodes.Plane003_0.geometry} material={nodes.Plane003_0.material} />
         </group>
-        <group position={[-5.23, -1.24, -4.21]} rotation={[1.75, 0.44, 0.42]} scale={0.59}>
+        <group position={[-2, 0, -1]} rotation={[1.75, 0.44, 0.42]} scale={0.3}>
           <mesh geometry={nodes.Plane005_0.geometry} material={nodes.Plane005_0.material} />
         </group>
-        <group position={[5.86, -3.06, -3.34]} rotation={[1.26, 0, 0.17]} scale={0.8}>
+        <group position={[2, 0, -1]} rotation={[1.26, 0, -0.5]} scale={0.3}>
           <mesh geometry={nodes.Plane006_0.geometry} material={nodes.Plane006_0.material} />
         </group>
       </group>
