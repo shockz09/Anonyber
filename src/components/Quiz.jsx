@@ -207,7 +207,7 @@ function Quiz() {
       fulldiv.classList.add("text-score");
     } else if (currentindex === quizData.length) {
       console.log("index equal");
-    }
+    } 
   };
   //     setCurrentIndex(currentindex + 1);
   //     setCurrentQuestion(quizData[currentindex].question);
