@@ -32,10 +32,10 @@ function quiz3() {
         {
           question:
             "You get a text message from a vendor who asks you to click on a link to renew your password so that you can log in to its website. You should:",
-          a: "lel ",
-          b: "kek",
-          c: "mhm",
-          d: "sup",
+          a: "Reply to the text to confirm that you really need to renew your password. ",
+          b: "Pick up the phone and call the vendor, using a phone number you know to be correct, to confirm that the request is real.",
+          c: "Click on the link. If it takes you to the vendor’s website, then you’ll know it’s not a scam.",
+          d: "None of these",
           correct: "b",
         },
         {
