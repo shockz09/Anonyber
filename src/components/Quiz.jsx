@@ -14,7 +14,7 @@ function Quiz({quizData}) {
   const buttonclicknext = () => {
    
     if (
-      currentindex < quizData.length -1  && (checkClickA || checkClickB || checkClickC || checkClickD)
+      currentindex < quizData.length   && (checkClickA || checkClickB || checkClickC || checkClickD)
     ) {
       setCurrentIndex(currentindex + 1);
       setCurrentQuestion(quizData[currentindex].question);
@@ -31,9 +31,9 @@ function Quiz({quizData}) {
        }
     } else if (currentindex === quizData.length ) {
       let fulldiv = document.querySelector(".main-div-quiz");
-      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`;
+      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length -1}</p>`;
       fulldiv.classList.add("text-score");
-    }else if(currentindex === quizData.length -1  && (checkClickA || checkClickB || checkClickC || checkClickD)){
+    }else if(currentindex < quizData.length + 1   && (checkClickA || checkClickB || checkClickC || checkClickD)){
       setCurrentIndex(currentindex + 1);
       setCheckClickA(false);
       setCheckClickB(false);
@@ -47,7 +47,7 @@ function Quiz({quizData}) {
   };
   const [currentindex, setCurrentIndex] = useState(1);
   const [currentQuestion, setCurrentQuestion] = useState(quizData[currentindex -1].question);
-  const [answers, setAnswers] = useState(quizData[currentindex -1]);
+  const [answers, setAnswers] = useState(quizData[currentindex - 1]);
   const [score, setScore] = useState(0);
   const [valueA, setValueA] = useState("");
   const [valueB, setValueB] = useState("");
