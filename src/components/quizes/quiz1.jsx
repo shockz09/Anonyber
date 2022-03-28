@@ -180,7 +180,7 @@ function quiz1() {
       ];
       return (
         <div>
-            <QuizMain />
+            <QuizMain quizData={quizData} />
         </div>
       )
 }

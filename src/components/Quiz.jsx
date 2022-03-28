@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function Quiz() {
+function Quiz({quizData}) {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -11,7 +11,7 @@ function Quiz() {
   }, []);
  
 
-  const buttonclicknext = (quizData) => {
+  const buttonclicknext = () => {
     
     if (
       currentindex < quizData.length -1 && (checkClickA || checkClickB || checkClickC || checkClickD)
