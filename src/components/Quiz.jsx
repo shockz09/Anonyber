@@ -189,7 +189,7 @@ function Quiz() {
 
   const buttonclicknext = () => {
     if (
-      (currentindex < quizData.length && checkClickA) || checkClickB || checkClickC || checkClickD
+      currentindex < quizData.length -1 && (checkClickA || checkClickB || checkClickC || checkClickD)
     ) {
       setCurrentIndex(currentindex + 1);
       console.log("done log");
@@ -197,17 +197,20 @@ function Quiz() {
       setAnswers(quizData[currentindex]);
       setCheckClickA(false);
       setCheckClickB(false);
-      console.log(quizData.length);
       setCheckClickC(false);
       setCheckClickD(false);
-    } else if (currentindex > quizData.length) {
+    } else if (currentindex === quizData.length -1) {
       let fulldiv = document.querySelector(".main-div-quiz");
       fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`;
       console.log("bruh kek");
       fulldiv.classList.add("text-score");
-    } else if (currentindex === quizData.length) {
-      console.log("index equal");
-    } 
+    }else if(currentindex < quizData.length && (checkClickA || checkClickB || checkClickC || checkClickD)){
+      setCurrentIndex(currentindex + 1);
+      setCheckClickA(false);
+      setCheckClickB(false);
+      setCheckClickC(false);
+      setCheckClickD(false);
+    }
   };
   //     setCurrentIndex(currentindex + 1);
   //     setCurrentQuestion(quizData[currentindex].question);
