@@ -4,7 +4,7 @@ function quiz2() {
     const quizData = [
         {
           question: "Which one of these statements is correct?",
-          a: "f you get an email that looks like it’s from someone you know, you can click on any links as long as you have a spam blocker and anti-virus protection.",
+          a: "If you get an email that looks like it’s from someone you know, you can click on any links as long as you have a spam blocker and anti-virus protection.",
           b: "You can trust an email really comes from a client if it uses the client’s logo and contains at least one fact about the client that you know to be true.",
           c: "Have your staff members access information via an open Wi-Fi network.",
           d: " If you get an email from Human Resources asking you to provide personal information right away, you should check it out first to make sure they are who they say are.      ",

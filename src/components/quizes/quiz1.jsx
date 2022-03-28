@@ -44,7 +44,7 @@ function quiz1() {
           b: "Turn off the router’s remote management.",
           c: "All of the these.",
           d: "Log out as the administrator once the router is set up.",
-          correct: "c",
+          correct: "d",
         },
       ];
       return (

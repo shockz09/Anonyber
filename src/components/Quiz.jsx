@@ -14,7 +14,7 @@ function Quiz({quizData}) {
   const buttonclicknext = () => {
     
     if (
-      currentindex < quizData.length -1 && (checkClickA || checkClickB || checkClickC || checkClickD)
+      currentindex < quizData.length -1  && (checkClickA || checkClickB || checkClickC || checkClickD)
     ) {
       setCurrentIndex(currentindex + 1);
       setCurrentQuestion(quizData[currentindex].question);
@@ -23,15 +23,17 @@ function Quiz({quizData}) {
       setCheckClickB(false);
       setCheckClickC(false);
       setCheckClickD(false);
-      if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
+      console.log(answervalue);
+      console.log(quizData[currentindex -1][quizData[currentindex -1].correct])
+       if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
-      }
-    
-    } else if (currentindex === quizData.length -1) {
+        console.log("sup")
+       }
+    } else if (currentindex > quizData.length -1) {
       let fulldiv = document.querySelector(".main-div-quiz");
       fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`;
       fulldiv.classList.add("text-score");
-    }else if(currentindex < quizData.length && (checkClickA || checkClickB || checkClickC || checkClickD)){
+    }else if(currentindex === quizData.length -1  && (checkClickA || checkClickB || checkClickC || checkClickD)){
       setCurrentIndex(currentindex + 1);
       setCheckClickA(false);
       setCheckClickB(false);
@@ -39,23 +41,14 @@ function Quiz({quizData}) {
       setCheckClickD(false);
       if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
+        console.log("sup")
       }
-      // } else if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
-      //   console.log("b is correct")
-      // }else if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
-      //   console.log("c is correct")
-      // }
-      // else if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
-      //   console.log("d is correct")
-      // }else {
-      //   console.log("ded")
-      // }
     }
   };
   const [currentindex, setCurrentIndex] = useState(1);
   const [currentQuestion, setCurrentQuestion] = useState(quizData[currentindex -1].question);
   const [answers, setAnswers] = useState(quizData[currentindex -1]);
-  const [score, setScore] = useState(1);
+  const [score, setScore] = useState(0);
   const [valueA, setValueA] = useState("");
   const [valueB, setValueB] = useState("");
   const [valueC, setValueC] = useState("");
@@ -65,12 +58,13 @@ function Quiz({quizData}) {
   const [checkClickB, setCheckClickB] = useState(false);
   const [checkClickC, setCheckClickC] = useState(false);
   const [checkClickD, setCheckClickD] = useState(false);
+
   const optionClick = (e) => {
     setValueA(answers.a);
     setValueB(answers.b);
     setValueC(answers.c);
     setValueD(answers.d);
-    setAnswervalue(e.target.value);
+    setAnswervalue(e.target.innerText);
     if (valueA === e.target.innerText) {
       setCheckClickA(true);
     } else if (valueB === e.target.innerText) {
