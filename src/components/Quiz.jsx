@@ -197,20 +197,19 @@ function Quiz() {
       setAnswers(quizData[currentindex]);
       setCheckClickA(false);
       setCheckClickB(false);
-      console.log(quizData.length);
       setCheckClickC(false);
       setCheckClickD(false);
-      console.log(quizData.length);
-    } else if (currentindex > quizData.length && (checkClickA || checkClickB || checkClickC || checkClickD)) {
+    } else if (currentindex === quizData.length -1) {
       let fulldiv = document.querySelector(".main-div-quiz");
       fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`;
       console.log("bruh kek");
       fulldiv.classList.add("text-score");
-    // } else if (currentindex === 20  && (checkClickA || checkClickB || checkClickC || checkClickD)) {
-    //   console.log("index equal");
-      
     }else if(currentindex < quizData.length && (checkClickA || checkClickB || checkClickC || checkClickD)){
-      console.log("hmmmmmmmmm")
+      setCurrentIndex(currentindex + 1);
+      setCheckClickA(false);
+      setCheckClickB(false);
+      setCheckClickC(false);
+      setCheckClickD(false);
     }
   };
   //     setCurrentIndex(currentindex + 1);
