@@ -26,7 +26,7 @@ function Quiz() {
       b: "False",
       c: "All of these",
       d: "None of these",
-      correct: "a",
+      correct: "d",
     },
     {
       question:
@@ -43,7 +43,7 @@ function Quiz() {
       b: "False",
       c: "All of the above",
       d: "None of these",
-      correct: "b",
+      correct: "d",
     },
     {
       question:
@@ -52,7 +52,7 @@ function Quiz() {
       b: "Turn off the router’s remote management.",
       c: "All of the these.",
       d: "Log out as the administrator once the router is set up.",
-      correct: "c",
+      correct: "d",
     },
     {
       question: "Which one of these statements is correct?",
@@ -69,7 +69,7 @@ function Quiz() {
       b: "False",
       c: "All of these",
       d: "None of these",
-      correct: "b",
+      correct: "d",
     },
     {
       question:
@@ -78,7 +78,7 @@ function Quiz() {
       b: "kek",
       c: "mhm",
       d: "sup",
-      correct: "b",
+      correct: "d",
     },
     {
       question:
@@ -87,7 +87,7 @@ function Quiz() {
       b: "False",
       c: "All of the above",
       d: "None of these",
-      correct: "a",
+      correct: "d",
     },
     {
       question:
@@ -96,7 +96,7 @@ function Quiz() {
       b: "Unplug the computer. This will get rid of any malware.",
       c: "Change any compromised passwords.",
       d: "All of the above",
-      correct: "c",
+      correct: "d",
     },
     {
       question:
@@ -114,7 +114,7 @@ function Quiz() {
       b: "Ransomware",
       c: "Brute-force",
       d: "None of these",
-      correct: "b",
+      correct: "d",
     },
     {
       question:
@@ -131,7 +131,7 @@ function Quiz() {
       b: "False",
       c: "All of the above",
       d: "None of these",
-      correct: "b",
+      correct: "d",
     },
     {
       question:
@@ -140,7 +140,7 @@ function Quiz() {
       b: "Turn off the router’s remote management.",
       c: "All of the these.",
       d: "Log out as the administrator once the router is set up.",
-      correct: "c",
+      correct: "d",
     },
     {
       question:
@@ -158,7 +158,7 @@ function Quiz() {
       b: "False",
       c: "All of these",
       d: "None of these",
-      correct: "a",
+      correct: "d",
     },
     {
       question:
@@ -175,7 +175,7 @@ function Quiz() {
       b: "False",
       c: "All of the above",
       d: "None of these",
-      correct: "b",
+      correct: "d",
     },
     {
       question: "Cyber criminals only target large companies.",
@@ -183,54 +183,64 @@ function Quiz() {
       b: "False",
       c: "All of the above",
       d: "None of these",
-      correct: "b",
+      correct: "d",
     },
   ];
 
   const buttonclicknext = () => {
-    setAnswerValue(quizData[currentindex].correct);
+    
     if (
       currentindex < quizData.length -1 && (checkClickA || checkClickB || checkClickC || checkClickD)
     ) {
+      // setAnswerValue(quizData[currentindex].correct);
       setCurrentIndex(currentindex + 1);
-      console.log("done log");
+      // console.log("done log");
       setCurrentQuestion(quizData[currentindex].question);
       setAnswers(quizData[currentindex]);
+      // setAnswers(quizData[currentindex]);
       setCheckClickA(false);
       setCheckClickB(false);
       setCheckClickC(false);
       setCheckClickD(false);
-    
-      if(valueA === quizData[currentindex].correct){
+      console.log(valueD)
+      console.log(quizData[currentindex -1][quizData[currentindex -1].correct])
+      if(valueA === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
-      }else if(valueB === quizData[currentindex].correct){
+        setValueA("");
+      } else if(valueB === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
-      }else if(valueC === quizData[currentindex].correct){
+        setValueB("");
+      } else if(valueC === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
+        setValueC("");
       }
-      else if(valueD === quizData[currentindex].answerValue){
+      else if(valueD === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
+        setValueD("");
       }
     
     } else if (currentindex === quizData.length -1) {
       let fulldiv = document.querySelector(".main-div-quiz");
       fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`;
-      console.log("bruh kek");
+      // console.log("bruh kek");
       fulldiv.classList.add("text-score");
     }else if(currentindex < quizData.length && (checkClickA || checkClickB || checkClickC || checkClickD)){
       setCurrentIndex(currentindex + 1);
+      // setAnswerValue(quizData[currentindex].correct);
       setCheckClickA(false);
       setCheckClickB(false);
       setCheckClickC(false);
       setCheckClickD(false);
-      if(valueA === quizData[currentindex][answerValue]){
+      // console.log(valueD)
+      // console.log(quizData[currentindex][answerValue])
+      if(valueA === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
-      }else if(valueB === quizData[currentindex][answerValue]){
+      } else if(valueB === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
-      }else if(valueB === quizData[currentindex][answerValue]){
+      } else if(valueC === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
       }
-      else if(valueB === quizData[currentindex][answerValue]){
+      else if(valueD === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
       }
     }
@@ -250,9 +260,9 @@ function Quiz() {
   //   }
   // };
   const [currentindex, setCurrentIndex] = useState(1);
-  const [currentQuestion, setCurrentQuestion] = useState(quizData[0].question);
-  const [answerValue, setAnswerValue] = useState("")
-  const [answers, setAnswers] = useState(quizData[0]);
+  const [currentQuestion, setCurrentQuestion] = useState(quizData[currentindex -1].question);
+  // const [answerValue, setAnswerValue] = useState(quizData[currentindex].question);
+  const [answers, setAnswers] = useState(quizData[currentindex -1]);
   const [score, setScore] = useState(0);
   const [valueA, setValueA] = useState("");
   const [valueB, setValueB] = useState("");
@@ -272,16 +282,16 @@ function Quiz() {
 
     if (valueA === e.target.innerText) {
       setCheckClickA(true);
-      console.log("done a ");
+      // console.log("done a ");
     } else if (valueB === e.target.innerText) {
       setCheckClickB(true);
-      console.log("done b ");
+      // console.log("done b ");
     } else if (valueC === e.target.innerText) {
       setCheckClickC(true);
-      console.log("done c ");
+      // console.log("done c ");
     } else if (valueD === e.target.innerText) {
       setCheckClickD(true);
-      console.log("done d ");
+      // console.log("done d ");
     }
     // }
   };
