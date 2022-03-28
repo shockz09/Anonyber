@@ -4,11 +4,12 @@
 @tailwind utilities;
 
 html{
- background-color:black;
+  background-color:black;
   background-repeat:no-repeat;
   background-size:cover;
   font-family: 'Source Code Pro', monospace;
   scroll-behavior: smooth; 
+  overflow-x: hidden;
 }
 *{
   padding:0px;

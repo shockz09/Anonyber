@@ -6,6 +6,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Suspense } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import {Link} from "react-router-dom";
 function CyberSecurity() {
   useEffect(() => {
     AOS.init();
@@ -50,9 +52,9 @@ function CyberSecurity() {
             </p>
             <div className="flex justify-start mt-2">
               <button className="btn btn-primary p-2 border-2 border-green-500 hover:bg-green-500 text-white">
-                <a href="#" className="text-green">
+                <Link to='/cybersecurity/what-is-ethical-hacking'>
                   Visit
-                </a>
+                </Link>
               </button>
             </div>
           </div>
@@ -71,9 +73,9 @@ function CyberSecurity() {
               </p>
               <div className="flex justify-end mt-2">
                 <button className="btn btn-primary p-2 border-2 hover:bg-green-500 border-green-500 text-white">
-                  <a href="#" className="text-green">
-                    Visit
-                  </a>
+                <Link to='/cybersecurity/prequisites-for-ethical-hacking'>
+                  Visit
+                </Link>
                 </button>
               </div>
             </div>
@@ -103,9 +105,9 @@ function CyberSecurity() {
             </p>
             <div className="flex justify-start mt-2">
               <button className="btn btn-primary p-2 border-2 hover:bg-green-500 border-green-500 text-white">
-                <a href="#" className="text-green">
+                <Link to='/cybersecurity/learn-ethical-hacking'>
                   Visit
-                </a>
+                </Link>
               </button>
             </div>
           </div>
@@ -123,9 +125,9 @@ function CyberSecurity() {
               </p>
               <div className="flex justify-end mt-2">
                 <button className="btn btn-primary p-2 border-2 hover:bg-green-500 border-green-500 text-white">
-                  <a href="#" className="text-green">
-                    Visit
-                  </a>
+                <Link to='/cybersecurity/top-websites-to-refer'>
+                  Visit
+                </Link>
                 </button>
               </div>
             </div>
@@ -153,14 +155,15 @@ function CyberSecurity() {
             </p>
             <div className="flex justify-start mt-2">
               <button className="btn btn-primary p-2 border-2 hover:bg-green-500 border-green-500 text-white">
-                <a href="#" className="text-green">
+              <Link to='/cybersecurity/skills-to-learn  '>
                   Visit
-                </a>
+                </Link>
               </button>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

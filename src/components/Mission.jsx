@@ -11,7 +11,7 @@ function Mission() {
     <section className="text-white text-center  mb-[15vh] lg:mt-[0vh] " data-aos="fade-down" id="Mission" >
 
         <h2 className="underline decoration-hecker text-center text-5xl mb-16">Our Mission</h2>
-        <p className="text-xl">
+        <p className="text-2xl">
           In the recent Covid-19 pandemic, dependency  on internet and technology
           has increased <br/>  substantially so has  the number  of cyber crimes.
           <br />
