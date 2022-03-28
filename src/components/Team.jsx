@@ -7,7 +7,7 @@ function Team() {
     <section className="p-10 flex flex-col items-center justify-center gap-10 text-center" id="team">
        <h2 className="underline decoration-hecker text-5xl mb-5 text-white">Our Team</h2>
       <div className="flex lg:flex-row flex-col gap-10 items-center justify-center text-center lg:text-left lg:items-none lg:justify-none" data-aos="fade-right">
-        <img src="kdhc" className="border border-hecker h-48 w-48"  />
+        <img src="https://i.ibb.co/gzw87p1/ansh-anonyber.jpg" className=" border border-hecker h-[150px] w-[240]"  />
         <div className="text-white">
           <h2 className="text-3xl lg:mb-8  text-green-500 ">Ansh Mamgain</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed adipisci laudantium <br/>
