@@ -10,7 +10,7 @@ html {
   font-family: "Source Code Pro", monospace;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  scrollbar-color: #00ff19 #00bd13 !important;
+    cursor:url(./icons8-cursor-30.png),auto;
 }
 * {
   padding: 0px;
@@ -61,3 +61,4 @@ html {
   background-color: green;
   border-radius:10px;
 }
+

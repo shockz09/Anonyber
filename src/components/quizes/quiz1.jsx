@@ -180,9 +180,9 @@ function quiz1() {
       ];
       return (
         <div>
-            <QuizMain quizData={quizData} />
+            <Quiz quizData={quizData} />
         </div>
       )
 }
 
-export default quiz1
+export default quiz1;
