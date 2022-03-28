@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Quiz from "../Quiz" 
 
 function quiz6() {
     const quizData = [
@@ -52,7 +52,6 @@ function quiz6() {
       return (
         <div>
             <Quiz quizData={quizData} />
-            {/* < quizData={quizData} /> */}
         </div>
       )
 }

@@ -1,49 +1,50 @@
 import React from 'react'
-
+import Quiz from "../Quiz" 
+ 
 function quiz5() {
     const quizData = [
         {
           question:
-            "Which of the following should you do to restrict access to your files and devices?",
-          a: "Update your software once a year.",
-          b: "Share passwords only with colleagues you trust.",
-          c: "Have your staff members access information via an open Wi-Fi network.",
-          d: "Use multi-factor authentication.",
+            "Which of the following is ONE sign of possible identity theft?",
+          a: "If you lose your wallet.",
+          b: "If you can't find your credit card.",
+          c: "If you see your sister steal your debit card.",
+          d: "Withdrawals from your bank account that you can't explain.",
           correct: "d",
         },
         {
-          question: "Which one of these statements is correct?",
-          a: "f you get an email that looks like it’s from someone you know, you can click on any links as long as you have a spam blocker and anti-virus protection.",
-          b: "You can trust an email really comes from a client if it uses the client’s logo and contains at least one fact about the client that you know to be true.",
-          c: "Have your staff members access information via an open Wi-Fi network.",
-          d: " If you get an email from Human Resources asking you to provide personal information right away, you should check it out first to make sure they are who they say are.      ",
-          correct: "d",
+          question: "How many people have experienced Identity Theft in the past?",
+          a: "13-14.4 million.",
+          b: "16 million",
+          c: "5 million",
+          d: "10 million",
+          correct: "a",
         },
         {
           question:
-            "An email from your boss asks for the name, addresses, and credit card information of the company’s top clients. The email says it’s urgent and to please reply right away. You should reply right away. True or False?",
-          a: "True",
-          b: "False",
-          c: "All of these",
-          d: "None of these",
+            "How do people commit identity theft? What do they need to do in order to succeed on committing identity theft?",
+          a: "The fraud has to stalk the victim and steal their wallet.",
+          b: "The thief needs to kidnap them and convince them to share their personal information.",
+        c: "The thief needs to obtain personally identifying information from the victim and gain more common knowledge about them.",
+        d: "All of these",  
+        correct: "b",
+        },
+        {
+          question:
+            "What is one of the MOST absolute common types of identity theft that is used? HINT: (video)",
+          a: "Robbery",
+          b: "Phishing",
+          c: "Fraud",
+          d: "Criminal",
           correct: "b",
         },
         {
           question:
-            "You get a text message from a vendor who asks you to click on a link to renew your password so that you can log in to its website. You should:",
-          a: "lel ",
-          b: "kek",
-          c: "mhm",
-          d: "sup",
-          correct: "b",
-        },
-        {
-          question:
-            "Email authentication can help protect against phishing attacks. True or False?",
-          a: "True",
-          b: "False",
-          c: "All of the above",
-          d: "None of these",
+            " What is Phishing?",
+          a: "Where a fraudster impersonates a trusted individual or entity, and asks the victim for sensitive info.",
+          b: "When a burglar threatens you.",
+          c: "When a family member or friend steals one of your belongings without asking.",
+          d: " When you feel somebody is watching you.",
           correct: "a",
         },
         
@@ -51,7 +52,6 @@ function quiz5() {
       return (
         <div>
             <Quiz quizData={quizData} />
-            {/* < quizData={quizData} /> */}
         </div>
       )
 }
