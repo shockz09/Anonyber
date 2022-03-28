@@ -60,7 +60,7 @@ function CyberSecurity() {
         <div className="flex justify-end lg:mr-10">
           <div
             data-aos="fade-left"
-            className="lg:flex-row flex flex-col justify-center lg:w-1/2 mt-5 ml-5 lg:mt-20 lg:ml-20 items-center border-left  border-green-500 gap-5"
+            className="lg:flex-row flex flex-col-reverse justify-center lg:w-1/2 mt-5 ml-5 lg:mt-20 lg:ml-20 items-center border-left  border-green-500 gap-5"
           >
             <div className="lg:text-left lg:ml-8 ml-5 mt-5 text-center flex flex-col items-center justify-center  lg:items-start lg:justify-start">
               <h1 className="text-green-500 text-3xl">
@@ -111,7 +111,7 @@ function CyberSecurity() {
         <div className="flex justify-end">
           <div
             data-aos="fade-left"
-            className="lg:flex-row flex flex-col justify-center lg:w-1/2 mt-5 ml-5 lg:mt-20 lg:ml-20 items-center border-left  border-green-500 gap-5"
+            className="lg:flex-row flex flex-col-reverse justify-center lg:w-1/2 mt-5 ml-5 lg:mt-20 lg:ml-20 items-center border-left  border-green-500 gap-5"
           >
             <div className="lg:text-left lg:ml-8 ml-5 mt-5 text-center flex flex-col items-center justify-center  lg:items-start lg:justify-start">
               <h1 className="text-green-500 text-3xl">Top sites to refer</h1>
