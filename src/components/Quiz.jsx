@@ -46,7 +46,7 @@ function Quiz({quizData}) {
     
     } else if (currentindex === quizData.length -1) {
       let fulldiv = document.querySelector(".main-div-quiz");
-      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`;
+      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score + 2} out of ${quizData.length}</p>`;
       fulldiv.classList.add("text-score");
     }else if(currentindex < quizData.length && (checkClickA || checkClickB || checkClickC || checkClickD)){
       setCurrentIndex(currentindex + 1);

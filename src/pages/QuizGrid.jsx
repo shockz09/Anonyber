@@ -16,37 +16,37 @@ function QuizGrid() {
             img_src="https://codingal.s3.amazonaws.com/media/quizcontest/thumbnail/2021/12/24/27.png"
             quiz_title="Quiz"
             level="Beginner"
-            quiz_focus="Basic Level CSS"
+            quiz_focus="Cyber Security"
           />
           <QuizCard
             img_src="https://codingal.s3.amazonaws.com/media/quizcontest/thumbnail/2021/12/24/27.png"
             quiz_title="Quiz"
             level="Beginner"
-            quiz_focus="Basic Level CSS"
+            quiz_focus="Cyber Security"
           />
           <QuizCard
             img_src="https://codingal.s3.amazonaws.com/media/quizcontest/thumbnail/2021/12/24/27.png"
             quiz_title="Quiz"
             level="Beginner"
-            quiz_focus="Basic Level CSS"
+            quiz_focus="Cyber Security"
           />
           <QuizCard
             img_src="https://codingal.s3.amazonaws.com/media/quizcontest/thumbnail/2021/12/24/27.png"
             quiz_title="Quiz"
             level="Beginner"
-            quiz_focus="Basic Level CSS"
+            quiz_focus="Phising and etc"
           />
           <QuizCard
             img_src="https://codingal.s3.amazonaws.com/media/quizcontest/thumbnail/2021/12/24/27.png"
             quiz_title="Quiz"
             level="Beginner"
-            quiz_focus="Basic Level CSS"
+            quiz_focus="Identify Theft"
           />
           <QuizCard
             img_src="https://codingal.s3.amazonaws.com/media/quizcontest/thumbnail/2021/12/24/27.png"
             quiz_title="Quiz"
             level="Beginner"
-            quiz_focus="Basic Level CSS"
+            quiz_focus="Identify Theft"
           />
         </div>
       </main>
