@@ -1,40 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html{
-  background-color:black;
-  background-repeat:no-repeat;
-  background-size:cover;
-  font-family: 'Source Code Pro', monospace;
-  scroll-behavior: smooth; 
+html {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Source Code Pro", monospace;
+  scroll-behavior: smooth;
   overflow-x: hidden;
+  scrollbar-color: #00ff19 #00bd13 !important;
 }
-*{
-  padding:0px;
-  margin:0px;
-}
-
-.hr{
-  border-top: 4px solid #00FF19;
-  margin-top:50px;
+* {
+  padding: 0px;
+  margin: 0px;
 }
 
-.swiper-button-next::after{
- color: #00FF19;
+.hr {
+  border-top: 4px solid #00ff19;
+  margin-top: 50px;
 }
-.swiper-button-prev::after{
-  color: #00FF19;
- }
 
- .text-score{
-   color:white;
-   text-align:center;
-   padding:10px;
-   font-size: 150%;
- }
- .swiper-container {
+.swiper-button-next::after {
+  color: #00ff19;
+}
+.swiper-button-prev::after {
+  color: #00ff19;
+}
+
+.text-score {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 150%;
+}
+.swiper-container {
   width: 480px;
 }
 

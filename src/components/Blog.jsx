@@ -9,7 +9,7 @@ function Blog(props) {
   }, []);
   return (
     <div className="" data-aos="flip-up">
-      <div className="flex flex-col items-center justify-center border border-hecker bg-black text-white text-center lg:w-[20vw] lg:h-[30vh] mt-10">
+      <div className="flex flex-col items-center justify-center border border-hecker h-[40vh] bg-black text-white text-center lg:w-[20vw] lg:h-[40vh] mt-10">
         <img
           className="border-4 border-hecker h-[16vh] w-72"
           src={props.blog_img}
