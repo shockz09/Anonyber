@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function QuizCard(props) {
   return (
@@ -8,7 +9,7 @@ function QuizCard(props) {
           alt={props.quiz_title}
           class="rounded-t-md object-cover w-full h-56 lazyloaded"
           src={props.img_src}
-        />
+          />
         <p class="bg-black rounded-t-md mx-6 px-2 absolute bottom-0 left-0">
           Q: 5
         </p>
