@@ -12,7 +12,7 @@ function Quiz({quizData}) {
  
 
   const buttonclicknext = () => {
-    
+   
     if (
       currentindex < quizData.length -1  && (checkClickA || checkClickB || checkClickC || checkClickD)
     ) {
@@ -29,7 +29,7 @@ function Quiz({quizData}) {
         setScore(score + 1);
         console.log("sup")
        }
-    } else if (currentindex > quizData.length -1) {
+    } else if (currentindex === quizData.length ) {
       let fulldiv = document.querySelector(".main-div-quiz");
       fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`;
       fulldiv.classList.add("text-score");
