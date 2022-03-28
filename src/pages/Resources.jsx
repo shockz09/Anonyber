@@ -3,13 +3,16 @@ import Search from "../components/Search";
 import VideoSlider from "../components/VideoSlider" 
 import BlogSlider from "../components/BlogSlider" 
 import "swiper/css";
+import Footer from "../components/Footer";
+
 
 function Resources() {
   return (
-    <div className="h-[150vh]" > 
+    <div className="h-[100vh]" > 
       <Search />
       <VideoSlider />
       <BlogSlider />
+      <Footer />
     </div>
   );
 }

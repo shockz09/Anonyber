@@ -1,16 +1,17 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Quiz', href: '/quiz', current: false },
-  { name: 'Resources', href: '/resources', current: false },
-  { name: 'Team', href: '/#team', current: false },
-]
+  { name: "Home", href: "/", current: true },
+  { name: "Quiz", href: "/quiz", current: false },
+  { name: "Resources", href: "/resources", current: false },
+  { name: "Cybersecurity", href: "/cybersecurity ", current: false },
+];
 
-function classNames(...classes) { 
-  return classes.filter(Boolean).join(' ')
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
@@ -32,39 +33,38 @@ export default function Navbar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="https://i.ibb.co/bg2tf5K/smallanonyber.png"
-                    alt="Anonyber"
-                  />
-                  <img
-                    className="hidden lg:block h-10 w-auto"
-                    src="https://i.ibb.co/w6PWygr/anonyberimg.png"
-                    alt="Anonyber"
-                  />
+                  <Link to="/">
+                    <img
+                      className="block lg:hidden h-8 w-auto"
+                      src="https://i.ibb.co/bg2tf5K/smallanonyber.png"
+                      alt="Anonyber"
+                    />
+                  </Link>
+                  <Link to="/">
+                    <img
+                      className="hidden lg:block h-10 w-auto"
+                      src="https://i.ibb.co/w6PWygr/anonyberimg.png"
+                      alt="Anonyber"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden sm:block sm:ml-[20%]">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={
-                         ' text-green-500 text-lg hover:bg-gray-800 hover:text-green-500 px-3 py-2 rounded-md font-medium'
+                          " text-green-500 text-lg hover:bg-gray-800 hover:text-green-500 px-3 py-2 rounded-md font-medium"
                         }
-                        
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-             
-
-               
-              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"></div>
             </div>
           </div>
 
@@ -76,10 +76,12 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block px-3 py-2 rounded-md text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -89,5 +91,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
