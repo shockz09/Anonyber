@@ -1,4 +1,5 @@
 import React from 'react'
+import Quiz from "../Quiz" 
 
 function quiz4() {
     const quizData = [
@@ -51,7 +52,6 @@ function quiz4() {
       return (
         <div>
             <Quiz quizData={quizData} />
-            {/* < quizData={quizData} /> */}
         </div>
       )
 }
