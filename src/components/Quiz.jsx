@@ -188,6 +188,7 @@ function Quiz() {
   ];
 
   const buttonclicknext = () => {
+    setAnswerValue(quizData[currentindex].correct);
     if (
       currentindex < quizData.length -1 && (checkClickA || checkClickB || checkClickC || checkClickD)
     ) {
@@ -199,6 +200,18 @@ function Quiz() {
       setCheckClickB(false);
       setCheckClickC(false);
       setCheckClickD(false);
+    
+      if(valueA === quizData[currentindex].correct){
+        setScore(score + 1);
+      }else if(valueB === quizData[currentindex].correct){
+        setScore(score + 1);
+      }else if(valueC === quizData[currentindex].correct){
+        setScore(score + 1);
+      }
+      else if(valueD === quizData[currentindex].answerValue){
+        setScore(score + 1);
+      }
+    
     } else if (currentindex === quizData.length -1) {
       let fulldiv = document.querySelector(".main-div-quiz");
       fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of ${quizData.length}</p>`;
@@ -210,6 +223,16 @@ function Quiz() {
       setCheckClickB(false);
       setCheckClickC(false);
       setCheckClickD(false);
+      if(valueA === quizData[currentindex][answerValue]){
+        setScore(score + 1);
+      }else if(valueB === quizData[currentindex][answerValue]){
+        setScore(score + 1);
+      }else if(valueB === quizData[currentindex][answerValue]){
+        setScore(score + 1);
+      }
+      else if(valueB === quizData[currentindex][answerValue]){
+        setScore(score + 1);
+      }
     }
   };
   //     setCurrentIndex(currentindex + 1);
@@ -226,9 +249,9 @@ function Quiz() {
   //     const content = document.querySelector(".all-content");
   //   }
   // };
-  const [currentindex, setCurrentIndex] = useState(0);
+  const [currentindex, setCurrentIndex] = useState(1);
   const [currentQuestion, setCurrentQuestion] = useState(quizData[0].question);
-  // const [submitButtonValue,setSubmitValue] = useState("Next");
+  const [answerValue, setAnswerValue] = useState("")
   const [answers, setAnswers] = useState(quizData[0]);
   const [score, setScore] = useState(0);
   const [valueA, setValueA] = useState("");
