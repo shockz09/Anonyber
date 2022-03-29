@@ -65,13 +65,13 @@ function Quiz({quizData}) {
     setValueC(answers.c);
     setValueD(answers.d);
     setAnswervalue(e.target.innerText);
-    if (valueA === e.target.innerText) {
+    if (valueA === answervalue) {
       setCheckClickA(true);
-    } else if (valueB === e.target.innerText) {
+    } else if (valueB === answervalue) {
       setCheckClickB(true);
-    } else if (valueC === e.target.innerText) {
+    } else if (valueC === answervalue) {
       setCheckClickC(true);
-    } else if (valueD === e.target.innerText) {
+    } else if (valueD === answervalue) {
       setCheckClickD(true);
     }
     
