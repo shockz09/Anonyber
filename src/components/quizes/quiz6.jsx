@@ -56,5 +56,4 @@ function Quiz6() {
         </div>
       )
 }
-
 export default Quiz6

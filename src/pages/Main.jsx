@@ -14,7 +14,6 @@ const Main = () => {
       <Features />
       <Team/> 
       <Footer />
-   
     </div>
   );
 };

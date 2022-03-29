@@ -9,8 +9,6 @@ function Quiz({quizData}) {
       duration: 1000,
     });
   }, []);
- 
-
   const buttonclicknext = () => {
    
     if (
@@ -23,16 +21,20 @@ function Quiz({quizData}) {
       setCheckClickB(false);
       setCheckClickC(false);
       setCheckClickD(false);
-      console.log(answervalue);
-      console.log(quizData[currentindex -1][quizData[currentindex -1].correct])
+     
        if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
         console.log("sup")
        }
     } else if (currentindex === quizData.length ) {
+      if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
+        setScore(score + 1);
+        console.log("sup")
+      }
       let fulldiv = document.querySelector(".main-div-quiz");
       fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of 5</p>
       <button className="btn-score" href="#">Go Back</button>`;
+      
       fulldiv.classList.add("text-score");
     }else if(currentindex < quizData.length + 1   && (checkClickA || checkClickB || checkClickC || checkClickD)){
       setCurrentIndex(currentindex + 1);
@@ -42,7 +44,6 @@ function Quiz({quizData}) {
       setCheckClickD(false);
       if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
-        console.log("sup")
       }
     }
   };
