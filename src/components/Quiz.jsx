@@ -12,9 +12,9 @@ function Quiz({quizData}) {
  
 
   const buttonclicknext = () => {
-    
+   
     if (
-      currentindex < quizData.length -1 && (checkClickA || checkClickB || checkClickC || checkClickD)
+      currentindex < quizData.length   && (checkClickA || checkClickB || checkClickC || checkClickD)
     ) {
       setCurrentIndex(currentindex + 1);
       setCurrentQuestion(quizData[currentindex].question);
@@ -23,70 +23,48 @@ function Quiz({quizData}) {
       setCheckClickB(false);
       setCheckClickC(false);
       setCheckClickD(false);
-      if(valueA === quizData[currentindex -1][quizData[currentindex -1].correct]){
+      console.log(answervalue);
+      console.log(quizData[currentindex -1][quizData[currentindex -1].correct])
+       if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
-        console.log("a is correct")
-        console.log(score)
-      } else if(valueB === quizData[currentindex -1][quizData[currentindex -1].correct]){
-        console.log("b is correct")
-        setScore(score + 1);
-        console.log(score)
-      }else if(valueC === quizData[currentindex -1][quizData[currentindex -1].correct]){
-        console.log("c is correct")
-        setScore(score + 1);
-        console.log(score)
-      }
-      else if(valueD === quizData[currentindex -1][quizData[currentindex -1].correct]){
-        console.log("d is correct")
-        setScore(score + 1);
-        console.log(score)
-      }else {
-        console.log("ded")
-      }
-    
-    } else if (currentindex === quizData.length -1) {
+        console.log("sup")
+       }
+    } else if (currentindex === quizData.length ) {
       let fulldiv = document.querySelector(".main-div-quiz");
-      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score + 2} out of ${quizData.length}</p>`;
+      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of 5</p>`;
       fulldiv.classList.add("text-score");
-    }else if(currentindex < quizData.length && (checkClickA || checkClickB || checkClickC || checkClickD)){
+    }else if(currentindex < quizData.length + 1   && (checkClickA || checkClickB || checkClickC || checkClickD)){
       setCurrentIndex(currentindex + 1);
       setCheckClickA(false);
       setCheckClickB(false);
       setCheckClickC(false);
       setCheckClickD(false);
-      if(valueA === quizData[currentindex -1][quizData[currentindex -1].correct]){
+      if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
         setScore(score + 1);
-        console.log("a is correct")
-      } else if(valueB === quizData[currentindex -1][quizData[currentindex -1].correct]){
-        console.log("b is correct")
-      }else if(valueC === quizData[currentindex -1][quizData[currentindex -1].correct]){
-        console.log("c is correct")
-      }
-      else if(valueD === quizData[currentindex -1][quizData[currentindex -1].correct]){
-        console.log("d is correct")
-      }else {
-        console.log("ded")
+        console.log("sup")
       }
     }
   };
   const [currentindex, setCurrentIndex] = useState(1);
   const [currentQuestion, setCurrentQuestion] = useState(quizData[currentindex -1].question);
-  const [answers, setAnswers] = useState(quizData[currentindex -1]);
-  const [score, setScore] = useState(1);
+  const [answers, setAnswers] = useState(quizData[currentindex - 1]);
+  const [score, setScore] = useState(0);
   const [valueA, setValueA] = useState("");
   const [valueB, setValueB] = useState("");
   const [valueC, setValueC] = useState("");
+  const [answervalue,setAnswervalue] = useState("");
   const [valueD, setValueD] = useState("");
   const [checkClickA, setCheckClickA] = useState(false);
   const [checkClickB, setCheckClickB] = useState(false);
   const [checkClickC, setCheckClickC] = useState(false);
   const [checkClickD, setCheckClickD] = useState(false);
+
   const optionClick = (e) => {
     setValueA(answers.a);
     setValueB(answers.b);
     setValueC(answers.c);
     setValueD(answers.d);
-
+    setAnswervalue(e.target.innerText);
     if (valueA === e.target.innerText) {
       setCheckClickA(true);
     } else if (valueB === e.target.innerText) {
@@ -96,6 +74,7 @@ function Quiz({quizData}) {
     } else if (valueD === e.target.innerText) {
       setCheckClickD(true);
     }
+    
   };
   return (
     <div className="border-hecker border main-div-quiz">

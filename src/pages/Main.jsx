@@ -15,7 +15,7 @@ const Main = () => {
       <Features />
       <Team/> 
       <Footer />
-    
+    <Quiz1 />
     </div>
   );
 };
