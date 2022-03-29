@@ -1,8 +1,16 @@
 import { useState } from "react";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Quiz({ quizData }) {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   const buttonclicknext = () => {
     if (
       currentindex < quizData.length &&
@@ -27,8 +35,20 @@ function Quiz({ quizData }) {
         console.log("sup");
       }
     } else if (currentindex === quizData.length) {
+     
+       if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
+        setScore(score + 1);
+        console.log("sup")
+       }
+    } else if (currentindex === quizData.length ) {
+      if(answervalue === quizData[currentindex -1][quizData[currentindex -1].correct]){
+        setScore(score + 1);
+        console.log("sup")
+      }
       let fulldiv = document.querySelector(".main-div-quiz");
-      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of 5</p>`;
+      fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of 5</p>
+      <button className="btn-score" href="#">Go Back</button>`;
+      
       fulldiv.classList.add("text-score");
     } else if (
       currentindex < quizData.length + 1 &&

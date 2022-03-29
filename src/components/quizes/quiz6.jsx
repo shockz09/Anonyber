@@ -53,10 +53,9 @@ function Quiz6() {
       ];  
       return (
         <div>
-        <Navbar />
+          <Navbar />
             <Quiz quizData={quizData} />
         </div>
       )
 }
-
 export default Quiz6

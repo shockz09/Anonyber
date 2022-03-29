@@ -53,7 +53,7 @@ function Quiz4() {
       ];
       return (
         <div>
-        <Navbar />
+          <Navbar />
             <Quiz quizData={quizData} />
         </div>
       )

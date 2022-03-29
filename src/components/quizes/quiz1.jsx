@@ -1,6 +1,7 @@
 import React from 'react'
 import Quiz from "../Quiz" 
 import Navbar from "../Navbar"
+
 function Quiz1() {
     const quizData = [
         {
@@ -45,7 +46,7 @@ function Quiz1() {
           b: "Turn off the router’s remote management.",
           c: "All of the these.",
           d: "Log out as the administrator once the router is set up.",
-          correct: "d",
+          correct: "a",
         },
       ];
       return (
