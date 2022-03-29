@@ -1,79 +1,20 @@
-# Project Details
+# Anonyber
 
-- **Category** : Cyber Awareness
+## The Need
 
-## Learning Materials Covered
+In the recent Covid-19 pandemic, dependency on internet and technology has increased 
+substantially so has the number of cyber crimes.
 
-- Phishing Attacks
+It is really alarming that most of the people don’t know how to protect themselves 
+from these cyber crimes, and many fall into these scams and lose their hard earned money etc..
 
-## Features
+It is our mission to increase cyber awareness around the globe, 
+preventing many people from falling into these scams.
 
-- Tips, tricks and videos in iframe
-- Quiz, Doubt forum (extra)
-- Quiz rating on navbar if logged in
-- Leaderboard
-- Feedback response form (airtable)
+## How Anonyber Solves This Need?
 
-## Routes
+Anonyber, is a completely free of cost ed tech platform focused on cyber awareness. It has handpicked videos, and blogs educating the users about various cyber attacks such as phishing, or online scams.
 
-#### Home Route
+It also has a bonus section, which allows users to step up their cyber game, and learn ethical hacking. It has many handpicked free resources organised in a roadmap to help you learn ethical hacking.
 
-- Missions
-- About
-- Team
-- Features with links
-- Eyes page
-
-```py
-if time == 'more':
-    doer = Vaarun
-```
-
-### Quiz Route
-
-- Difficulty Filtered
-- Rating system for player
-- Cyber security quizzes API
-- leader board
-
-### Types of attacks
-
-- Materials for all attacks with examples.
-- How to prevent attacks
-
-### Learn ethical hacking
-
-- links for courses. / roadmap
-
-## Optional Feature
-
-- Discord forum bot, and server
-
-## Tech Stack
-
-- HTML, CSS, JS, REACT, Python(for bot if we make)
-
-## Role, Assignment and Deadline
-
-- **Ansh**: 3D Interface of main page, project setup
-- **Rohit**: Interface + Functionality with quiz app
-- **Vaarun**: Bot(if), responsive, animation, help ansh.
-
-Next meet tommorow night (because ansh has personal life)
-20 march: quiz: rohit, main oage me and ansh.
-
-- Research(Ansh)
-
-## Project Details
-
-- **Color Scheme**: Black and green, greyish(secondary color for shadows)
-
-- **Design File**: Figma design system (Vaarun by 22nd march) (Main page by 19th march)
-
-## Daily Breakdown
-
-### Day 1
-
-- Design file by Vaarun
-- Navbar, Color scheme
-- Learning and exploration
+Additionally 
