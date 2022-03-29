@@ -1,6 +1,6 @@
 import React from 'react'
 import Quiz from "../Quiz" 
- 
+import Navbar from "../Navbar";
 function Quiz5() {
     const quizData = [
         {
@@ -51,6 +51,7 @@ function Quiz5() {
       ];
       return (
         <div>
+          <Navbar />
             <Quiz quizData={quizData} />
         </div>
       )
