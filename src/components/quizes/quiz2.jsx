@@ -1,6 +1,6 @@
 import React from 'react'
 import Quiz from "../Quiz" 
-function quiz2() {
+function Quiz2() {
     const quizData = [
         {
           question: "Which one of these statements is correct?",
@@ -54,4 +54,4 @@ function quiz2() {
       )
 }
 
-export default quiz2
+export default Quiz2

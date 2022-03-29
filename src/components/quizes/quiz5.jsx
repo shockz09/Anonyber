@@ -1,7 +1,7 @@
 import React from 'react'
 import Quiz from "../Quiz" 
  
-function quiz5() {
+function Quiz5() {
     const quizData = [
         {
           question:
@@ -56,4 +56,4 @@ function quiz5() {
       )
 }
 
-export default quiz5
+export default Quiz5
