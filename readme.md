@@ -27,4 +27,4 @@ Additionally to clear your doubts there is a community of cyber aware people whe
 
 - Vaarun Sinha: Mission, Features, Team, Video  Blog, Quiz and Resources Card, Quiz page, Responsiveness, Cyber security detail pages(5), Readme, Research, AOS, Discord Server, Deploy To Netlify
 
-- Rohit Mishra: Quiz, Footer, Deploy To Vercel, Emotional Damage.
+- Rohit Mishra: Quiz, Footer, Deploy To Vercel
