@@ -41,6 +41,7 @@ function Quiz({ quizData }) {
       let fulldiv = document.querySelector(".main-div-quiz");
       fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of 5.`
 
+      
       fulldiv.classList.add("text-score");
     } else if (
       currentindex < quizData.length + 1 &&
@@ -80,6 +81,7 @@ function Quiz({ quizData }) {
     setValueB(answers.b);
     setValueC(answers.c);
     setValueD(answers.d);
+    
     setAnswervalue(e.target.innerText);
     if (valueA === answervalue) {
       setCheckClickA(true);

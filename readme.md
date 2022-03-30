@@ -25,9 +25,13 @@ Additionally to clear your doubts there is a community of cyber aware people whe
 
 - Ansh Mamgain(Team Lead) : Navbar, intro component , Ethical Hacking page, 3 Models, AOS, Routing, Resources Slider, Research, Custom Scrollbar, Custom Mouse.
 
+<<<<<<< HEAD
 - Vaarun Sinha(Rookie): Mission, Features, Team, Video  Blog, Quiz and Resources Card, Quiz page, Responsiveness, Cyber security detail pages(5), Readme, Research, AOS, Discord Server, Deploy To Netlify.
 
 - Rohit Mishra(peon): Quiz, Footer, Deploy To Vercel, Emotional Damage.
 - Vaarun Sinha: Mission, Features, Team, Video  Blog, Quiz and Resources Card, Quiz page, Responsiveness, Cyber security detail pages(5), Readme, Research, AOS, Discord Server, Deploy To Netlify
+=======
+- Vaarun Sinha: Mission, Features, Team, Video  Blog, Quiz and Resources Card, Quiz page, Responsiveness, Cyber security detail pages(5), Readme, Research, AOS, Discord Server.
+>>>>>>> 4a9a07b375258f8adf77d957d92e79291d1f6c9f
 
-- Rohit Mishra: Quiz, Footer, Deploy To Vercel
+- Rohit Mishra: Quiz, Footer, Deploy To Vercel,Questions for all quizes,Result
