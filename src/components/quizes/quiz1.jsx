@@ -5,8 +5,8 @@ import Navbar from "../Navbar"
 function Quiz1() {
     const quizData = [
         {
-          question:
-            "Which of the following should you do to restrict access to your files and devices?",
+          question:  "Which of the following should you do to restrict access to your files and devices?",
+          answerOptions: [],
           a: "Update your software once a year.",
           b: "Share passwords only with colleagues you trust.",
           c: "Have your staff members access information via an open Wi-Fi network.",
