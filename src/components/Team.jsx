@@ -25,7 +25,7 @@ function Team() {
             {" "}
             Ansh Mamgain is a 15 year old boy from Delhi obsessed with tech.
             <br />
-            He is fluent in many languages and has 2+ years of wrok experiance
+            He is fluent in many languages and has 2+ years of work experiance
             with Full Stack Web Development
             <br />
           </p>
@@ -42,9 +42,9 @@ function Team() {
         <div className="text-white">
           <h2 className="text-3xl lg:mb-4  text-green-500 ">Vaarun Sinha</h2>
           <p>
-            Vaarun Sinha is a young and enthusiastic website & python developer.
-            <br />I regularly share my knowledge on my blog as I'm passionate
-            about teaching.
+            Vaarun Sinha is a young and enthusiastic website & python developer.{" "}
+            <br /> He regularly shares his knowledge on his personal blog as he
+            is passionate about teaching.
           </p>
         </div>
       </div>
@@ -52,12 +52,17 @@ function Team() {
         className="flex lg:flex-row flex-col gap-10 items-center justify-center text-center lg:text-left lg:items-none lg:justify-none"
         data-aos="fade-right"
       >
-        <img src="https://i.ibb.co/QFNq3Pn/rohithacka-modified.jpg" className="border border-hecker h-48 w-48" />
+        <img
+          src="https://i.ibb.co/QFNq3Pn/rohithacka-modified.jpg"
+          className="border border-hecker h-48 w-48"
+        />
         <div className="text-white">
           <h2 className="text-3xl lg:mdb-8  text-green-500 ">Rohit Mishra</h2>
           <p>
-          Rohit is a 12 year old front end web developer , a tech enthusiast and
-           a aspiring engineer,<br/> he has 1 year of experience in programming. He is passionate about blockchain and Web3.
+            Rohit is a 12 year old front end web developer , a tech enthusiast
+            and a aspiring engineer,
+            <br /> he has 1 year of experience in programming. He is passionate
+            about blockchain and Web3.
           </p>
         </div>
       </div>
