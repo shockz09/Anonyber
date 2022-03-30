@@ -56,8 +56,8 @@ function Team() {
         <div className="text-white">
           <h2 className="text-3xl lg:mdb-8  text-green-500 ">Rohit Mishra</h2>
           <p>
-          Rohit is a 12 year old front end web developer , a tech enthusiast and
-           a aspiring engineer,<br/> he has 1 year of experience in programming. He is passionate about blockchain and Web3.
+          Rohit is a young front end web developer , a tech enthusiast and
+           a aspiring engineer,<br/>He is a tech enthusiast and he is passionate about blockchain and Web3.
           </p>
         </div>
       </div>
