@@ -34,7 +34,6 @@ function Quiz({quizData}) {
       let fulldiv = document.querySelector(".main-div-quiz");
       fulldiv.innerHTML = `<p className="text-score">Your Score is ${score} out of 5</p>
      <button className="btn-score" href="#">Go Back</button>`;
-      
       fulldiv.classList.add("text-score");
     }else if(currentindex < quizData.length + 1   && (checkClickA || checkClickB || checkClickC || checkClickD)){
       setCurrentIndex(currentindex + 1);
@@ -60,8 +59,9 @@ function Quiz({quizData}) {
   const [checkClickB, setCheckClickB] = useState(false);
   const [checkClickC, setCheckClickC] = useState(false);
   const [checkClickD, setCheckClickD] = useState(false);
-
+  
   const optionClick = (e) => {
+    
     setValueA(answers.a);
     setValueB(answers.b);
     setValueC(answers.c);

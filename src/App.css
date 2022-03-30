@@ -62,3 +62,7 @@ html {
   border-radius:10px;
 }
 
+.option:focus{
+background-color: #00ff19;
+color: black;
+}
