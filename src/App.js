@@ -18,6 +18,7 @@ import Quiz3 from "./components/quizes/quiz3"
 import Quiz4 from "./components/quizes/quiz4"
 import Quiz5 from "./components/quizes/quiz5"
 import Quiz6 from "./components/quizes/quiz6"
+import NewQuiz from "./components/NewQuiz"
 function App() {
   return (
     <>
@@ -52,6 +53,8 @@ function App() {
           <Route path="/quiz/quiz4" element={<Quiz4 />} />
           <Route path="/quiz/quiz5" element={<Quiz5 />} />
           <Route path="/quiz/quiz6" element={<Quiz6 />} />
+          <Route path="/quiz/quiz6" element={<Quiz6 />} />
+          <Route path="/newquiz" element={<NewQuiz />} />
         </Routes>
       </BrowserRouter>
     </>
