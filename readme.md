@@ -25,6 +25,6 @@ Additionally to clear your doubts there is a community of cyber aware people whe
 
 - Ansh Mamgain : Navbar, Hero section, Ethical Hacking page, 3 Models, AOS, Routing, Resources Slider, Research, Custom Scrollbar, Custom Mouse.
 
-- Vaarun Sinha: Mission, Features, Team, Video  Blog, Quiz and Resources Card, Quiz page, Responsiveness, Cyber security detail pages(5), Readme, Research, AOS, Discord Server, Deploy To Netlify
+- Vaarun Sinha: Mission, Features, Team, Video  Blog, Quiz and Resources Card, Quiz page, Responsiveness, Cyber security detail pages(5), Readme, Research, AOS, Discord Server.
 
-- Rohit Mishra: Quiz, Footer, Deploy To Vercel
+- Rohit Mishra: Quiz, Footer, Deploy To Vercel,Questions for all quizes,Result
