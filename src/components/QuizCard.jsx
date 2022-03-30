@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function QuizCard(props) {
   return (
@@ -37,12 +37,14 @@ function QuizCard(props) {
             ></path>
           </svg>
           <div class="flex space-x-2">
-            <img src="https://fastly.codingal.com/images/quizzes/beginner-level.svg" />
+            <img src="https://fastly.codingal.com/images/quizzes/beginner-level.svg" alt="level" />
             <span>{props.level} level</span>
           </div>
+          <Link to={props.navigation}>
           <button class="p-3 border border-hecker text-white hover:bg-dark-hecker active:bg-hecker">
-            Play now
+           Play now 
           </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -13,11 +13,11 @@ import TopWebsitesToRefer from "./pages/TopWebsitesToRefer";
 import Skills from "./pages/Skills";
 import QuizGrid from "./pages/QuizGrid";
 import Quiz1 from "./components/quizes/quiz1"
-import quiz2 from "./components/quizes/quiz2"
-import quiz3 from "./components/quizes/quiz3"
-import quiz4 from "./components/quizes/quiz4"
-import quiz5 from "./components/quizes/quiz5"
-import quiz6 from "./components/quizes/quiz6"
+import Quiz2 from "./components/quizes/quiz2"
+import Quiz3 from "./components/quizes/quiz3"
+import Quiz4 from "./components/quizes/quiz4"
+import Quiz5 from "./components/quizes/quiz5"
+import Quiz6 from "./components/quizes/quiz6"
 function App() {
   return (
     <>
@@ -47,6 +47,11 @@ function App() {
           />
           <Route path="/cybersecurity/skills-to-learn" element={<Skills />} />
           <Route path="/quiz/quiz1" element={<Quiz1 />} />
+          <Route path="/quiz/quiz2" element={<Quiz2 />} />
+          <Route path="/quiz/quiz3" element={<Quiz3 />} />
+          <Route path="/quiz/quiz4" element={<Quiz4 />} />
+          <Route path="/quiz/quiz5" element={<Quiz5 />} />
+          <Route path="/quiz/quiz6" element={<Quiz6 />} />
         </Routes>
       </BrowserRouter>
     </>

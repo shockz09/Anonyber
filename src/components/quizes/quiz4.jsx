@@ -1,6 +1,8 @@
 import React from 'react'
-import Quiz from "../Quiz" 
-import Navbar from "../Navbar";
+import Quiz from "../Quiz"
+import Navbar from "../Navbar"
+ 
+
 function Quiz4() {
     const quizData = [
         {
