@@ -11,4 +11,4 @@
 - https://www.ncsc.gov.uk/guidance/phishing 
 
 ## Talking about attacks
-- https://youtu.be/Y7zNlEMDmI4 (Phising)
+- https://youtu.be/Y7zNlEMDmI4 (Phishing)
