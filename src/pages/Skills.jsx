@@ -11,7 +11,7 @@ function Skills() {
       <Navbar />
       <main className="text-center flex flex-col items-center justify-content gap-10 mt-10">
         <h1 className="lg:text-7xl mb-7 mt-3 underline decoration-hecker text-xl text-white">
-          What Are The Skills Required For Ethical Hacking ye?
+          What Are The Skills Required For Ethical Hacking?
         </h1>
 
         <Link
